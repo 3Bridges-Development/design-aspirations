@@ -4,8 +4,11 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          'health-red': '#E83151',
-          'dark-red': '#820515',
+          'da-black': '##000000',
+          'da-white': '#FFFFFF',
+          'da-burgundy': '#663333',
+          'da-grey': '#999999',
+          'da-mauve': '#b39999',
         },
         fontFamily: {
           'sans': ['Proxima Nova'],
