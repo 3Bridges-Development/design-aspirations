@@ -1,5 +1,7 @@
 import React from "react";
 import Navigation from "./components/Navigation";
+import WelcomeBanner from "./components/WelcomeBanner";
+import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
 import useContentful from "./hooks/use-contentful";
 import "./App.css";
@@ -20,9 +22,11 @@ function App() {
   if (!data) return <span>Loading...</span>;
 
   return (
-    <div className="App">
+    <div className="App flex flex-col min-h-screen">
+      {window.location.href.endsWith("/") ? <WelcomeBanner /> : null}
       <Navigation />
       <Outlet />
+      <Footer />
     </div>
   );
 }
