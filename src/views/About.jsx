@@ -20,6 +20,7 @@ function About() {
                     <h2 className="text-da-white w-3/5 text-lg pt-4">Our commitment is to partner with you to assess your needs and lend our expertise in how we learn best, keeping human-centered design in mind.</h2>
                     <h2 className="text-da-white w-3/5 text-lg pt-4">We will meet you where you are and strategize to get you where you want to be. After an initial consultation and a thorough analysis, you may seek a detailed report to start conversations within your organization. You may be looking to upscale your existing material. You may be an expert in your field and are ready to share that knowledge, but you aren't quite sure how. We can help with that, too, by designing and developing effective and engaging solutions.</h2>
                 </div>
+                <div>Place holder for instagram feed TODO</div>
             </section>
         </>
     )
