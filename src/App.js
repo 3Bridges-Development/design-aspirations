@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App flex flex-col min-h-screen">
       {window.location.href.endsWith("/") ? (
-        <WelcomeBanner />
+        <WelcomeBanner showContent={true} />
       ) : (
-        null
+        <WelcomeBanner showContent={false} />
       )}
       <Navigation />
       <Outlet />
