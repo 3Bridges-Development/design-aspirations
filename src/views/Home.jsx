@@ -12,9 +12,35 @@ function Home() {
                 </div>
                 <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md"></hr>
             </section>
-            <section className="flex flex-col items-center text-center mt-1">
+            <section className="flex flex-col items-center text-center mt-1 pb-8">
                 <h2 className="text-da-burgundy text-2xl justify-center">Designed Aspirations offer Instructional Design and Development of educational and training material.</h2>
-                <h3 className="text-xl m-1">Pharmaceutical - Mental Wellness - Human Services</h3>
+                <h3 className="text-xl m-1 mb-8">Pharmaceutical - Mental Wellness - Human Services</h3>
+            </section>
+            <section className="text-center mt-1 bg-da-grey p-2 py-8">
+                <h2 className="text-2xl">SERVICES OFFERED</h2>
+                <div className="flex flex-row justify-center flex-wrap">
+                    <div className="flex flex-col items-center">
+                        <h2 className="text-lg">INSTRUCTIONAL DESIGN</h2>
+                        <img className="w-2/5 max-h-fit p-2" src={daLogo} alt="ID image" />
+                        <a className="text-lg" href="instructionaldesign">see more</a>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <h2 className="text-lg">MULTI-MEDIA DESIGN</h2>
+                        <img className="w-2/5 max-h-fit p-2" src={daLogo} alt="MD image" />
+                        <a className="text-lg" href="multimediadesign">see more</a>
+                    </div>
+                </div>
+            </section>
+            <section className="flex flex-col items-center text-center mt-1 p-2 py-8">
+                <h2 className="text-2xl justify-center">TESTIMONIALS</h2>
+                {/* need logic to only show headshot photo when data exists */}
+                {daLogo ? (
+                    <img className="w-1/5 max-h-fit p-2" src={daLogo} alt="testimonial image" />
+                ): (
+                    null
+                )}
+                <h4 className="italic text-lg p-2">"Testimonial content goes here."</h4>
+                <h5 className="font-bold text-lg p-2">Name</h5>
             </section>
         </>
     )
