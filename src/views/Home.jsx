@@ -16,7 +16,7 @@ function Home() {
         {/* check what the functionality of this button should be, I think it should go to calendly link */}
         <div className="flex items-center">
           <button
-            className="md:absolute md:bottom-30 bg-da-black text-da-yellow p-2 max-h-10 hover:text-blue-200"
+            className="md:absolute md:bottom-30 bg-da-black text-da-yellow p-2 m-2 max-h-10 hover:text-blue-200"
             type="button"
             onClick={console.log("clicked!")}
           >
@@ -25,8 +25,10 @@ function Home() {
         </div>
         <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md"></hr>
       </section>
-      <section className="flex flex-col items-center md:m-0 m-1">
-        <h2 className="text-da-burgundy text-2xl">{data.homePage.slogan}</h2>
+      <section className="flex flex-col items-center text-center mt-1">
+        <h2 className="text-da-burgundy text-2xl justify-center">
+          {data.homePage.slogan}
+        </h2>
         <h3 className="text-xl m-1">{data.homePage.byline}</h3>
       </section>
     </>

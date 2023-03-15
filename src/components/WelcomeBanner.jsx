@@ -1,9 +1,14 @@
 import React from "react";
 
-export default function WelcomeBanner() {
+export default function WelcomeBanner({ showContent }) {
     return (
         <>
-            <div className="flex justify-center flex-wrap bg-da-black text-da-white p-2">WELCOME TO DESIGNED ASPIRATIONS</div>
+            {showContent ? (
+                <div className="flex justify-center flex-wrap bg-da-black text-da-white p-2">WELCOME TO DESIGNED ASPIRATIONS</div>
+            ) : 
+            (
+                null
+            )}
         </>
     )
 }

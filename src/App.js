@@ -32,7 +32,11 @@ function App() {
 
   return (
     <div className="App flex flex-col min-h-screen">
-      {window.location.href.endsWith("/") ? <WelcomeBanner /> : null}
+      {window.location.href.endsWith("/") ? (
+        <WelcomeBanner showContent={true} />
+      ) : (
+        <WelcomeBanner showContent={false} />
+      )}
       <Navigation />
       <Outlet context={data} />
       <Footer />
