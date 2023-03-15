@@ -1,9 +1,12 @@
-import React from "react"
+import React from "react";
+import id_header from "../assets/id_header.png";
 
 function InstructionalDesign() {
     return (
         <>
-        <div>ID!</div>
+            <section className="flex justify-center">
+                <img src={id_header} alt="Instructional Design" className="max-h-fit" />
+            </section>
         </>
     )
 }
