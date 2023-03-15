@@ -7,7 +7,16 @@ import useContentful from "./hooks/use-contentful";
 import "./App.css";
 
 const query = `
-query {}
+query {
+  homePage(id:"umC0ztECwdjKJwjWzd964") {
+    logo {
+      title
+      url
+    }
+    slogan
+    byline
+  }
+}
 `;
 
 function App() {
@@ -25,7 +34,7 @@ function App() {
     <div className="App flex flex-col min-h-screen">
       {window.location.href.endsWith("/") ? <WelcomeBanner /> : null}
       <Navigation />
-      <Outlet />
+      <Outlet context={data} />
       <Footer />
     </div>
   );
