@@ -21,12 +21,12 @@ function Home() {
                 <div className="flex flex-row justify-center flex-wrap">
                     <div className="flex flex-col items-center">
                         <h2 className="text-lg">INSTRUCTIONAL DESIGN</h2>
-                        <img className="w-2/5 max-h-fit p-2" src={daLogo} alt="ID image" />
+                        <img className="w-2/5 max-h-fit p-2" src={daLogo} alt="ID" />
                         <a className="text-lg" href="instructionaldesign">see more</a>
                     </div>
                     <div className="flex flex-col items-center">
                         <h2 className="text-lg">MULTI-MEDIA DESIGN</h2>
-                        <img className="w-2/5 max-h-fit p-2" src={daLogo} alt="MD image" />
+                        <img className="w-2/5 max-h-fit p-2" src={daLogo} alt="MD" />
                         <a className="text-lg" href="multimediadesign">see more</a>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ function Home() {
                 <h2 className="text-2xl justify-center">TESTIMONIALS</h2>
                 {/* need logic to only show headshot photo when data exists */}
                 {daLogo ? (
-                    <img className="w-1/5 max-h-fit p-2" src={daLogo} alt="testimonial image" />
+                    <img className="w-1/5 max-h-fit p-2" src={daLogo} alt="testimonial" />
                 ): (
                     null
                 )}
