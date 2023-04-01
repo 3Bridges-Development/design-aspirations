@@ -42,7 +42,7 @@ function App() {
         {errors.map((error) => error.message).join(",")}
       </span>
     );
-  if (!data) return <span>Loading...</span>;
+  if (!data) return <span></span>;
 
   return (
     <div className="App flex flex-col min-h-screen">
