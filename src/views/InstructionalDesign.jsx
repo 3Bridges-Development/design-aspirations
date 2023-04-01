@@ -21,7 +21,6 @@ function InstructionalDesign() {
                             text1: "There is often a misconception as a trainer, coach, instructor, or mental health professional that because you are an expert in your subject matter, you are presenting it in the most engaging and absorbable manner to your audience or client.",
                             text2: "The role of an Instructional Designer is to be something other than a field expert. It is to take a birdseye view of your established outcomes, ensure that all of your supporting content and activities align with the outcomes, and assess if you can improve how you present it." 
                         }}
-                        link={{ url: "https://www.google.com/maps" }}
                         title={"Design"}
                     />
                     {/* remove below cards */}
@@ -31,7 +30,6 @@ function InstructionalDesign() {
                             text1: "There is often a misconception as a trainer, coach, instructor, or mental health professional that because you are an expert in your subject matter, you are presenting it in the most engaging and absorbable manner to your audience or client.",
                             text2: "The role of an Instructional Designer is to be something other than a field expert. It is to take a birdseye view of your established outcomes, ensure that all of your supporting content and activities align with the outcomes, and assess if you can improve how you present it." 
                         }}
-                        link={{ url: "https://www.google.com/maps" }}
                         title={"Development"}
 
                     />
@@ -41,16 +39,6 @@ function InstructionalDesign() {
                             text1: "There is often a misconception as a trainer, coach, instructor, or mental health professional that because you are an expert in your subject matter, you are presenting it in the most engaging and absorbable manner to your audience or client.",
                             text2: "The role of an Instructional Designer is to be something other than a field expert. It is to take a birdseye view of your established outcomes, ensure that all of your supporting content and activities align with the outcomes, and assess if you can improve how you present it." 
                         }}
-                        link={{ url: "https://www.google.com/maps" }}
-                        title={"Development"}
-                    />
-                    <Card 
-                        image={{ src: ride_share, alt: "Instructional Design"}}
-                        content={{ 
-                            text1: "There is often a misconception as a trainer, coach, instructor, or mental health professional that because you are an expert in your subject matter, you are presenting it in the most engaging and absorbable manner to your audience or client.",
-                            text2: "The role of an Instructional Designer is to be something other than a field expert. It is to take a birdseye view of your established outcomes, ensure that all of your supporting content and activities align with the outcomes, and assess if you can improve how you present it." 
-                        }}
-                        link={{ url: "https://www.google.com/maps" }}
                         title={"Consulting"}
                     />
                 </div>
