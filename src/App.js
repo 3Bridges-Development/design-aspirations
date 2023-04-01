@@ -30,6 +30,23 @@ query {
     testimonialText
     testimonialName
   }
+  aboutPage(id:"hlvVK6Q7xdJqqV7e1Kvc3") {
+  	quote
+    quoteAuthor
+    headshot {
+      title
+      url
+    }
+    title
+    name
+    aboutParagraph
+  }
+  aboutPageTextBlockCollection {
+    items{
+      headline
+      description
+    }
+  }
 }
 `;
 
