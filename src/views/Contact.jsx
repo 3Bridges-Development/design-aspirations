@@ -26,12 +26,12 @@ function Contact() {
                             </label>
                             <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description" type="description" placeholder="Description"></textarea>
                         </div>
-                        <div className="flex flex-col md:w-2/5 p-8">
+                        <div className="flex self-center flex-col md:w-2/5 p-8">
                             <h2 className="text-lg font-bold">Why Us?</h2>
                             <br />
                             <h2 className="text-lg pb-10">Strong, top-quality content is only one-half of a successful session, training, or course. Having dynamic and engaging visual assets is the other; that is where we come in.</h2>
                             <button
-                                className="bg-da-black text-da-white w-3/5 p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                                className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
                                 type="button"
                                 onClick={() => window.open("https://v1.tailwindcss.com/components/forms")}
                             >
