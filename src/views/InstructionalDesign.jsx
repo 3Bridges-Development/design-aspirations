@@ -10,7 +10,7 @@ function InstructionalDesign() {
                 <img src={id_header} alt="Instructional Design" className="h-auto md:w-1/5 w-3/5 pt-8 pb-16" />
             </section>
             <section className="bg-da-black flex justify-center p-8">
-                <div className="text-da-white w-4/5 pl-8">INSTRUCTIONAL DESIGN</div>
+                <div className="text-da-white w-4/5 pl-8 text-xl">INSTRUCTIONAL DESIGN</div>
             </section>
             <section className="bg-da-black p-8 flex justify-center">
                 {/* need to add .map here instead of hard coding multiple cards */}
@@ -22,6 +22,7 @@ function InstructionalDesign() {
                             text2: "The role of an Instructional Designer is to be something other than a field expert. It is to take a birdseye view of your established outcomes, ensure that all of your supporting content and activities align with the outcomes, and assess if you can improve how you present it." 
                         }}
                         link={{ url: "https://www.google.com/maps" }}
+                        title={"Design"}
                     />
                     {/* remove below cards */}
                     <Card 
@@ -31,6 +32,8 @@ function InstructionalDesign() {
                             text2: "The role of an Instructional Designer is to be something other than a field expert. It is to take a birdseye view of your established outcomes, ensure that all of your supporting content and activities align with the outcomes, and assess if you can improve how you present it." 
                         }}
                         link={{ url: "https://www.google.com/maps" }}
+                        title={"Development"}
+
                     />
                     <Card 
                         image={{ src: ride_share, alt: "Instructional Design"}}
@@ -39,6 +42,7 @@ function InstructionalDesign() {
                             text2: "The role of an Instructional Designer is to be something other than a field expert. It is to take a birdseye view of your established outcomes, ensure that all of your supporting content and activities align with the outcomes, and assess if you can improve how you present it." 
                         }}
                         link={{ url: "https://www.google.com/maps" }}
+                        title={"Development"}
                     />
                     <Card 
                         image={{ src: ride_share, alt: "Instructional Design"}}
@@ -47,6 +51,7 @@ function InstructionalDesign() {
                             text2: "The role of an Instructional Designer is to be something other than a field expert. It is to take a birdseye view of your established outcomes, ensure that all of your supporting content and activities align with the outcomes, and assess if you can improve how you present it." 
                         }}
                         link={{ url: "https://www.google.com/maps" }}
+                        title={"Consulting"}
                     />
                 </div>
             </section>
