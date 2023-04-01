@@ -15,6 +15,20 @@ query {
     }
     slogan
     byline
+    idImage {
+      title
+      url
+    }
+    mmImage {
+      title
+      url
+    }
+    testimonialHeadshot {
+      title
+      url
+    }
+    testimonialText
+    testimonialName
   }
 }
 `;

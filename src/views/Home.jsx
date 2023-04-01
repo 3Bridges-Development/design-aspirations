@@ -36,14 +36,22 @@ function Home() {
         <div className="flex flex-row justify-center flex-wrap">
           <div className="flex flex-col items-center">
             <h2 className="text-lg">INSTRUCTIONAL DESIGN</h2>
-            <img className="w-2/5 max-h-fit p-2" src={daLogo} alt="ID" />
+            <img
+              className="w-full max-h-fit p-2"
+              src={data.homePage.idImage.url}
+              alt={data.homePage.idImage.title}
+            />
             <a className="text-lg" href="instructionaldesign">
               see more
             </a>
           </div>
           <div className="flex flex-col items-center">
             <h2 className="text-lg">MULTI-MEDIA DESIGN</h2>
-            <img className="w-2/5 max-h-fit p-2" src={daLogo} alt="MD" />
+            <img
+              className="w-full max-h-fit p-2"
+              src={data.homePage.mmImage.url}
+              alt={data.homePage.mmImage.title}
+            />
             <a className="text-lg" href="multimediadesign">
               see more
             </a>
@@ -53,11 +61,17 @@ function Home() {
       <section className="flex flex-col items-center text-center mt-1 p-2 py-8">
         <h2 className="text-2xl justify-center">TESTIMONIALS</h2>
         {/* need logic to only show headshot photo when data exists */}
-        {daLogo ? (
-          <img className="w-1/5 max-h-fit p-2" src={daLogo} alt="testimonial" />
+        {data.homePage.logo.url ? (
+          <img
+            className="w-1/5 max-h-fit p-2"
+            src={data.homePage.testimonialHeadshot.url}
+            alt={data.homePage.testimonialHeadshot.title}
+          />
         ) : null}
-        <h4 className="italic text-lg p-2">"Testimonial content goes here."</h4>
-        <h5 className="font-bold text-lg p-2">Name</h5>
+        <h4 className="italic text-lg p-2">{data.homePage.testimonialText}</h4>
+        <h5 className="font-bold text-lg p-2">
+          {data.homePage.testimonialName}
+        </h5>
       </section>
     </>
   );
