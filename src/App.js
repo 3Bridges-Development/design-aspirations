@@ -47,6 +47,23 @@ query {
       description
     }
   }
+  instructionalDesign(id: "1HmMivcfRIh8t9Maw7zZAt") {
+    instructionalImage {
+      title
+      url
+    }
+    instructionalTitle
+  }
+  cardCollection(order: sys_firstPublishedAt_ASC) {
+    items {
+      image {
+        title
+        url
+      }
+      title
+      cardDescription
+    }
+  }
 }
 `;
 
