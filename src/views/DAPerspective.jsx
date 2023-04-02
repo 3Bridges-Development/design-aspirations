@@ -5,13 +5,10 @@ import BlogCard from "../components/Blog-Card";
 function DAPerspective() {
     const [shouldShowSingleBlog, setShouldShowSingleBlog] = useState(false);
     const [featuredBlog, setFeaturedBlog] = useState('');
-    console.log(shouldShowSingleBlog)
 
     function handleBlogClick(e) {
         setShouldShowSingleBlog(true);
-        console.log(e)
         const selectedBlog = fakeData.find(item => item.content.text1 === e.target.innerHTML);
-        console.log(selectedBlog)
         setFeaturedBlog(selectedBlog);
     }
 
