@@ -19,7 +19,7 @@ function DAPerspective() {
             alt: "Perspective1"
         },
         content: {
-            text1: "first text... add some with just text1 and no text2",
+            text1: "header: Click to Read More",
             text2: "The role of an Instructional Designer...",
             // make sure this can be multiple paragraphs and include images
             fullText: "The role of an Instructional Designer...The role of an Instructional Designer...The role of an Instructional Designer...The role of an Instructional Designer...The role of an Instructional Designer...The role of an Instructional Designer...The role of an Instructional Designer...The role of an Instructional Designer..." 
@@ -68,7 +68,7 @@ function DAPerspective() {
         <section className="flex justify-center pb-8">
             {shouldShowSingleBlog && featuredBlog ? (
                 <>
-                {/* the text1 for content is what is unique here to determine blog data when clicked */}
+                {/* the text1 for content is what is unique here to determine blog data when clicked - so headers need to be unique */}
                     <div className="bg-da-light-grey flex flex-col items-center md:w-2/4 w-4/5">
                         <div className="p-4">
                             <img src={featuredBlog.image.src} alt={featuredBlog.image.alt} className="h-auto pt-8 pb-16 w-full max-h-fit" />
