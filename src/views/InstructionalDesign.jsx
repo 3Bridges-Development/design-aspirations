@@ -1,12 +1,11 @@
 import React from "react";
+import Card from "../components/Card";
 import { useOutletContext } from "react-router-dom";
 import returnLineBreaks from "../hooks/line-break";
 import id_header from "../assets/id_header.png";
-import Card from "../components/Card";
 
 function InstructionalDesign() {
   const data = useOutletContext();
-  console.log(data);
 
   return (
     <>
