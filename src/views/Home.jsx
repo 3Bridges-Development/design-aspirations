@@ -18,9 +18,8 @@ function Home() {
           <button
             className="md:absolute md:bottom-30 bg-da-black text-da-yellow p-2 m-2 max-h-10 hover:text-blue-200"
             type="button"
-            onClick={console.log("clicked!")}
           >
-            BOOK CONSULTATION
+            <a href="/contact">BOOK CONSULTATION</a>
           </button>
         </div>
         <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md"></hr>
