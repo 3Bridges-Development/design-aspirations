@@ -54,7 +54,7 @@ query {
     }
     instructionalTitle
   }
-  cardCollection(order: sys_firstPublishedAt_ASC) {
+  cardCollection(order: sys_id_DESC) {
     items {
       image {
         title
@@ -62,6 +62,23 @@ query {
       }
       title
       cardDescription
+    }
+  }
+  multiMedia(id: "2yOaQmtQPppa11d3zyc4Xj") {
+    mmImage {
+      title
+      url
+    }
+    title
+  }
+  mmCardCollection(order:title_DESC) {
+    items {
+      image {
+      title
+      url
+    }
+    title
+    cardDescription
     }
   }
 }
