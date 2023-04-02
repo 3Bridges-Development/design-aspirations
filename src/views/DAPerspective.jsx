@@ -68,7 +68,7 @@ function DAPerspective() {
         <section className="flex justify-center pb-8">
             {shouldShowSingleBlog && featuredBlog ? (
                 <>
-                {/* the alts for the images are what are unique here to determine blog data when clicked */}
+                {/* the text1 for content is what is unique here to determine blog data when clicked */}
                     <div className="bg-da-light-grey flex flex-col items-center md:w-2/4 w-4/5">
                         <div className="p-4">
                             <img src={featuredBlog.image.src} alt={featuredBlog.image.alt} className="h-auto pt-8 pb-16 w-full max-h-fit" />
@@ -94,7 +94,6 @@ function DAPerspective() {
                     <img src={da_perspective} alt="Perspectives" className="h-auto pt-8 pb-16" />
                     </div>
                     <div className="bg-da-light-grey flex flex-row flex-wrap justify-center w-3/5 max-h-screen overflow-y-auto">
-                        {/* need to use .map here too */}
                         {fakeData.map(item => (
                             <BlogCard 
                                 image={{ src: item.image.src, alt: item.image.alt}}
