@@ -78,9 +78,9 @@ function Contact() {
                             </div>
                         </div>
                         <div className="flex self-center flex-col md:w-2/5 p-8">
-                            <h2 className="text-lg font-bold">Why Us?</h2>
+                            <h2 className="text-3xl font-bold">Why Us?</h2>
                             <br />
-                            <h2 className="text-lg pb-10">Strong, top-quality content is only one-half of a successful session, training, or course. Having dynamic and engaging visual assets is the other; that is where we come in.</h2>
+                            <h2 className="text-xl pb-10">Strong, top-quality content is only one-half of a successful session, training, or course. Having dynamic and engaging visual assets is the other; that is where we come in.</h2>
                             <div>
                                 {/* ideally use .map here too */}
                                 <PopupButton

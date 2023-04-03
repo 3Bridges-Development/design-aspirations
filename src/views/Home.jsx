@@ -15,10 +15,10 @@ function Home() {
         />
         <div className="flex items-center">
           <button
-            className="md:absolute md:bottom-30 bg-da-black text-da-yellow p-2 m-2 max-h-10 hover:text-blue-200 rounded"
+            className="md:absolute md:bottom-30 bg-da-mauve text-da-white p-2 m-2 max-h-10 hover:text-blue-200 rounded"
             type="button"
           >
-            <a href="/contact">BOOK CONSULTATION</a>
+            <a href="/contact" className="font-bold">BOOK CONSULTATION</a>
           </button>
         </div>
         <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md"></hr>
@@ -30,12 +30,12 @@ function Home() {
         <h3 className="text-xl m-1">{data.homePage.byline}</h3>
       </section>
       <section className="text-center mt-1 bg-da-grey p-2 py-8">
-        <h2 className="text-2xl">SERVICES OFFERED</h2>
+        <h2 className="text-2xl pb-4">SERVICES OFFERED</h2>
         <div className="flex flex-row justify-center flex-wrap">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center p-20">
             <h2 className="text-lg">INSTRUCTIONAL DESIGN</h2>
             <img
-              className="w-full max-h-fit p-2"
+              className="w-full max-h-fit p-10"
               src={data.homePage.idImage.url}
               alt={data.homePage.idImage.title}
             />
@@ -43,10 +43,10 @@ function Home() {
               see more
             </a>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center p-20">
             <h2 className="text-lg">MULTI-MEDIA DESIGN</h2>
             <img
-              className="w-full max-h-fit p-2"
+              className="w-full max-h-fit p-10"
               src={data.homePage.mmImage.url}
               alt={data.homePage.mmImage.title}
             />

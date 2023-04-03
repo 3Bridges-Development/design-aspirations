@@ -39,7 +39,7 @@ function DAPerspective() {
                 </p>
               </div>
               <button
-                className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center rounded"
                 type="button"
                 onClick={() => setShouldShowSingleBlog(false)}
               >
