@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
+import { PopupButton } from "react-calendly";
 
 function Contact() {
     const [name, setName] = useState();
@@ -80,27 +81,42 @@ function Contact() {
                             <h2 className="text-lg font-bold">Why Us?</h2>
                             <br />
                             <h2 className="text-lg pb-10">Strong, top-quality content is only one-half of a successful session, training, or course. Having dynamic and engaging visual assets is the other; that is where we come in.</h2>
-                            <button
-                                className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
-                                type="button"
-                                onClick={() => window.open("https://calendly.com/designedaspirations/initial-consultation-project-discovery")}
-                            >
-                                Book Initial Consulatation - Project Discovery
-                            </button>
-                            <button
-                                className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
-                                type="button"
-                                onClick={() => window.open("https://calendly.com/designedaspirations/30min")}
-                            >
-                                30 Minute Meeting
-                            </button>
-                            <button
-                                className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
-                                type="button"
-                                onClick={() => window.open("https://calendly.com/designedaspirations/60min")}
-                            >
-                                60 Minute Meeting
-                            </button>
+                            <div>
+                                {/* ideally use .map here too */}
+                                <PopupButton
+                                    url="https://calendly.com/designedaspirations/initial-consultation-project-discovery"
+                                    /*
+                                    * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+                                    * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+                                    */
+                                    rootElement={document.getElementById("root")}
+                                    text="Book Initial Consulatation - Project Discovery"
+                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                                    type="button"
+                                />
+                                <PopupButton
+                                    url="https://calendly.com/designedaspirations/30min"
+                                    /*
+                                    * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+                                    * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+                                    */
+                                    rootElement={document.getElementById("root")}
+                                    text="30 Minute Meeting"
+                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                                    type="button"
+                                />
+                                <PopupButton
+                                    url="https://calendly.com/designedaspirations/60min?month=2023-04"
+                                    /*
+                                    * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
+                                    * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
+                                    */
+                                    rootElement={document.getElementById("root")}
+                                    text="60 Minute Meeting"
+                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                                    type="button"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
