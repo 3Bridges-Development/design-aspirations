@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:3001",
   "name": "design",
   "version": "0.1.0",
   "private": true,
@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "server": "node index.js",
     "client": "npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run client\" \"npm run server\""
   },
   "eslintConfig": {
     "extends": [
