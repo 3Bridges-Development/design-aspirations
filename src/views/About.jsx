@@ -19,7 +19,7 @@ function About() {
           <img
             src={data.aboutPage.headshot.url}
             alt={data.aboutPage.headshot.title}
-            className="w-2/5"
+            className="w-2/5 rounded-full"
           />
           <h4 className="pt-4 font-bold">{data.aboutPage.title}</h4>
           <h4 className="pb-4 font-bold">{data.aboutPage.name}</h4>
