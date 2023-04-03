@@ -4,9 +4,9 @@ const port = 3001 || process.env.PORT;
 const nodemailer = require('nodemailer');
 const sendGridTransport = require('nodemailer-sendgrid-transport');
 const bodyParser = require('body-parser');
+const sendGrid = require('@sendgrid/mail');
 
 require('dotenv').config();
-const sendGrid = require('@sendgrid/mail');
 sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.use(bodyParser.json());
