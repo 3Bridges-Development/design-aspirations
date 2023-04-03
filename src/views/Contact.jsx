@@ -69,7 +69,7 @@ function Contact() {
                             <div className="pt-10">
                                 {!isFormValid ? (<p className="decoration-rose-700">Name, Phone, Email, and Brief Description of project are required</p>) : null}
                                 <button
-                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center rounded"
                                     type="button"
                                     onClick={() => postData()}
                                 >
@@ -91,7 +91,7 @@ function Contact() {
                                     */
                                     rootElement={document.getElementById("root")}
                                     text="Book Initial Consulatation - Project Discovery"
-                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center rounded"
                                     type="button"
                                 />
                                 <PopupButton
@@ -102,7 +102,7 @@ function Contact() {
                                     */
                                     rootElement={document.getElementById("root")}
                                     text="30 Minute Meeting"
-                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center rounded"
                                     type="button"
                                 />
                                 <PopupButton
@@ -113,7 +113,7 @@ function Contact() {
                                     */
                                     rootElement={document.getElementById("root")}
                                     text="60 Minute Meeting"
-                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center"
+                                    className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center rounded"
                                     type="button"
                                 />
                             </div>
