@@ -30,6 +30,57 @@ query {
     testimonialText
     testimonialName
   }
+  aboutPage(id:"hlvVK6Q7xdJqqV7e1Kvc3") {
+  	quote
+    quoteAuthor
+    headshot {
+      title
+      url
+    }
+    title
+    name
+    aboutParagraph
+  }
+  aboutPageTextBlockCollection {
+    items{
+      headline
+      description
+    }
+  }
+  instructionalDesign(id: "1HmMivcfRIh8t9Maw7zZAt") {
+    instructionalImage {
+      title
+      url
+    }
+    instructionalTitle
+  }
+  cardCollection(order: sys_id_DESC) {
+    items {
+      image {
+        title
+        url
+      }
+      title
+      cardDescription
+    }
+  }
+  multiMedia(id: "2yOaQmtQPppa11d3zyc4Xj") {
+    mmImage {
+      title
+      url
+    }
+    title
+  }
+  mmCardCollection(order:title_DESC) {
+    items {
+      image {
+      title
+      url
+    }
+    title
+    cardDescription
+    }
+  }
 }
 `;
 

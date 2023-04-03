@@ -19,7 +19,7 @@ function useContentful(query) {
           body: JSON.stringify({ query }),
         }
       )
-      .then((respone) => respone.json())
+      .then((response) => response.json())
       .then(({ data, errors }) => {
         if (errors) setErrors(errors);
         if (data) setData(data);
