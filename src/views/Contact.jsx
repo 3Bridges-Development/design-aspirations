@@ -90,7 +90,7 @@ function Contact() {
                                     * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
                                     */
                                     rootElement={document.getElementById("root")}
-                                    text="Book Initial Consulatation - Project Discovery"
+                                    text="Book Initial Consulatation"
                                     className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center rounded"
                                     type="button"
                                 />
