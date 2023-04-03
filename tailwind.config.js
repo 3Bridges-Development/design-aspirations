@@ -16,7 +16,8 @@ module.exports = {
         'da-light-blue': '#ADD8E6',
       },
       fontFamily: {
-        'sans': ['Proxima Nova'],
+        'sans': ['ui-sans-serif', 'system-ui'],
+        'serif': ['ui-serif', 'Georgia'],
       },
     },
   },
