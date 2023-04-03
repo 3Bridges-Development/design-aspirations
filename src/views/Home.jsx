@@ -66,7 +66,7 @@ function Home() {
             alt={data.homePage.testimonialHeadshot.title}
           />
         ) : null}
-        <h4 className="italic text-lg p-2">{data.homePage.testimonialText}</h4>
+        <h4 className="italic text-lg p-2 md:w-3/5">{data.homePage.testimonialText}</h4>
         <h5 className="font-bold text-lg p-2">
           {data.homePage.testimonialName}
         </h5>
