@@ -13,14 +13,12 @@ function Home() {
           alt={data.homePage.logo.title}
           className="md:w-2/5 sm:2-1/5 max-h-fit"
         />
-        {/* check what the functionality of this button should be, I think it should go to calendly link */}
         <div className="flex items-center">
           <button
-            className="md:absolute md:bottom-30 bg-da-black text-da-yellow p-2 m-2 max-h-10 hover:text-blue-200"
+            className="md:absolute md:bottom-30 bg-da-black text-da-yellow p-2 m-2 max-h-10 hover:text-blue-200 rounded"
             type="button"
-            onClick={console.log("clicked!")}
           >
-            BOOK CONSULTATION
+            <a href="/contact">BOOK CONSULTATION</a>
           </button>
         </div>
         <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md"></hr>
@@ -63,7 +61,7 @@ function Home() {
         {/* need logic to only show headshot photo when data exists */}
         {data.homePage.logo.url ? (
           <img
-            className="w-1/5 max-h-fit p-2"
+            className="w-1/5 max-h-fit p-2 rounded-full"
             src={data.homePage.testimonialHeadshot.url}
             alt={data.homePage.testimonialHeadshot.title}
           />
