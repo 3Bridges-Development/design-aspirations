@@ -81,6 +81,23 @@ query {
     cardDescription
     }
   }
+  daPerspective(id: "40ZyLLQspLPfZZmVMVA1m2") {
+    image {
+      title
+      url
+    }
+  }
+  blogCardCollection(order:sys_firstPublishedAt_DESC) {
+    items {
+      blogImage {
+        title
+        url
+      }
+      blogTitle
+      blogShortDesc
+      blogFullDesc
+    }
+  }
 }
 `;
 

@@ -6,7 +6,6 @@ import mm_header from "../assets/MM_header.png";
 
 function MultiMediaDesign() {
   const data = useOutletContext();
-  console.log(data);
 
   return (
     <>
