@@ -1,15 +1,16 @@
 const express = require('express');
 const app = express();
-const port = 3000 || process.env.PORT;
+const port = 3001 || process.env.PORT;
 const nodemailer = require('nodemailer');
 const sendGridTransport = require('nodemailer-sendgrid-transport');
+const bodyParser = require('body-parser');
 
 require('dotenv').config();
 const sendGrid = require('@sendgrid/mail');
 sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 const transporter = nodemailer.createTransport(sendGridTransport({
@@ -41,5 +42,5 @@ app.post('/send', (req, res) => {
 })
 
 app.listen(port,()=>{
-    console.log("server is running on", port || 3000)
+    console.log("server is running on", port || 3001)
 })
