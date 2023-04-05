@@ -16,12 +16,12 @@ function MultiMediaDesign() {
           className="h-auto md:w-1/5 w-3/5 pt-8 pb-16"
         />
       </section>
-      <section className="bg-da-black flex justify-center p-8">
+      <section className="bg-da-grey flex justify-center p-8">
         <div className="text-da-white w-4/5 pl-8 text-xl">
           {data.multiMedia.title}
         </div>
       </section>
-      <section className="bg-da-black p-8 flex justify-center">
+      <section className="bg-da-grey p-8 flex justify-center">
         <div className="flex flex-wrap justify-center w-4/5">
           {data
             ? data.mmCardCollection.items.map((item) => (

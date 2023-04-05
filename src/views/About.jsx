@@ -9,9 +9,9 @@ function About() {
     <>
       <section>
         <h1 className="text-xl flex justify-center pb-4">ABOUT US</h1>
-        <div className="bg-da-mauve p-20 flex flex-col items-center text-center">
-          <h2 className="text-2xl">{data.aboutPage.quote}</h2>
-          <h3 className="text-xl">{data.aboutPage.quoteAuthor}</h3>
+        <div className="bg-da-black p-20 flex flex-col items-center text-center">
+          <h2 className="text-4xl text-da-white">{data.aboutPage.quote}</h2>
+          <h3 className="text-xl text-da-white">{data.aboutPage.quoteAuthor}</h3>
         </div>
       </section>
       <section className="bg-da-light-grey p-8 flex md:flex-row md:justify-center flex-col items-center">
@@ -33,9 +33,9 @@ function About() {
       <section>
         {data
           ? data.aboutPageTextBlockCollection.items.map((item) => (
-              <div className="bg-da-black md:px-8 p-2 pt-8 pb-8 flex flex-col items-center">
-                <h2 className="text-da-white w-3/5 text-xl">{item.headline}</h2>
-                <p className="text-da-white w-3/5 text-lg pt-4">
+              <div className="bg-da-grey md:px-8 p-2 pt-8 pb-8 flex flex-col items-center">
+                <h2 className="text-da-black w-3/5 text-xl">{item.headline}</h2>
+                <p className="text-da-black w-3/5 text-lg pt-4">
                   {returnLineBreaks(item.description)}
                 </p>
               </div>

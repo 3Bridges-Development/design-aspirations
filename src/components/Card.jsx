@@ -9,7 +9,7 @@ export default function Card({ image, description, title, video }) {
           <img
           src={image.src}
           alt={image.alt}
-          className="h-auto md:w-full w-3/5 pt-8 pb-16 justify-items-center max-h-92"
+          className="pt-8 pb-16 justify-items-center max-h-72"
         />
         ) : (
           <video src={video.src} controls="controls" />
