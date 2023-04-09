@@ -46,7 +46,7 @@ function Contact() {
         <>
             <section>
                 <h1 className="text-xl flex justify-center pb-4">CONTACT US</h1>
-                <div className="bg-da-mauve p-10 flex flex-col items-center text-center h-[75vh]">
+                <div className="bg-da-mauve p-10 flex flex-col items-center text-center min-h-[75vh]">
                     <h2 className="text-xl pb-2">Ready to take your project to the next level?  Book your consultation today or contact us for more information.</h2>
                     <div className="flex flex-row flex-wrap justify-center">
                         <div className="flex flex-col p-8 md:w-2/5">
