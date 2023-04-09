@@ -22,22 +22,29 @@ query {
       title
       url
     }
+    consultationUrl
+    consultationText
     slogan
     byline
-    idImage {
-      title
-      url
-    }
-    mmImage {
-      title
-      url
-    }
+    servicesHeadline
+    testimonialHeadline
     testimonialHeadshot {
       title
       url
     }
     testimonialText
     testimonialName
+  }
+  servicesCollection(order:sys_firstPublishedAt_ASC) {
+    items {
+      servicesHeader
+      servicesImage {
+        title
+        url
+      }
+      servicesUrl
+      servicesText
+    }
   }
   aboutPage(id:"hlvVK6Q7xdJqqV7e1Kvc3") {
   	quote
