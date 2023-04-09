@@ -8,10 +8,14 @@ function About() {
   return (
     <>
       <section>
-        <h1 className="text-xl flex justify-center pb-4">ABOUT US</h1>
+        <h1 className="text-xl flex justify-center pb-4">
+          {data.aboutPage.aboutHeadline}
+        </h1>
         <div className="bg-da-black p-20 flex flex-col items-center text-center">
           <h2 className="text-4xl text-da-white">{data.aboutPage.quote}</h2>
-          <h3 className="text-xl text-da-white">{data.aboutPage.quoteAuthor}</h3>
+          <h3 className="text-xl text-da-white">
+            {data.aboutPage.quoteAuthor}
+          </h3>
         </div>
       </section>
       <section className="bg-da-light-grey p-8 flex md:flex-row md:justify-center flex-col items-center">
