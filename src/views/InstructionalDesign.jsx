@@ -19,7 +19,7 @@ function InstructionalDesign() {
         />
       </section>
       <section className="bg-da-grey flex justify-center p-8">
-        <div className="text-da-white w-4/5 pl-8 text-xl">
+        <div className="text-da-black w-4/5 pl-8 text-xl">
           {data.instructionalDesign.instructionalTitle}
         </div>
       </section>
