@@ -18,7 +18,7 @@ function Home() {
             className="md:absolute md:bottom-30 bg-da-mauve text-da-white p-2 m-2 max-h-10 hover:text-blue-200 rounded"
             type="button"
           >
-            <a href="/contact" className="font-bold">BOOK CONSULTATION</a>
+            <a href="/contact" className="font-bold text-da-black">BOOK CONSULTATION</a>
           </button>
         </div>
         <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md"></hr>
