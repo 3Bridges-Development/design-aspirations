@@ -8,6 +8,9 @@ import "./App.css";
 
 const query = `
 query {
+  welcomeBanner(id: "2m4bS9r2r0xHw986TvVGqC") {
+    bannerHeadline
+  }
   homePage(id:"umC0ztECwdjKJwjWzd964") {
     logo {
       title
@@ -72,13 +75,13 @@ query {
     title
   }
   mmCardCollection(order:title_DESC) {
-    items {
-      image {
+      items {
+      	image {
+        title
+        url
+      }
       title
-      url
-    }
-    title
-    cardDescription
+      cardDescription
     }
   }
   daPerspective(id: "40ZyLLQspLPfZZmVMVA1m2") {
@@ -115,9 +118,9 @@ function App() {
   return (
     <div className="App flex flex-col min-h-screen">
       {window.location.href.endsWith("/") ? (
-        <WelcomeBanner showContent={true} />
+        <WelcomeBanner bannerData={data} showContent={true} />
       ) : (
-        <WelcomeBanner showContent={false} />
+        <WelcomeBanner bannerData={data} showContent={false} />
       )}
       <Navigation />
       <Outlet context={data} />
