@@ -1,8 +1,6 @@
 import React from "react";
 
 export default function Footer({ footerData }) {
-  console.log(footerData);
-
   return (
     <>
       <footer className="flex justify-center space-x-5 flex-wrap flex-row bg-da-light-grey p-6 text-lg mt-auto">
