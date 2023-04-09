@@ -15,12 +15,12 @@ function Home() {
         />
         <div className="flex items-center">
           <button
-            className="md:absolute md:bottom-30 bg-da-mauve text-da-white p-2 m-2 max-h-10 hover:text-blue-200 rounded"
+            className="md:absolute md:bottom-30 bg-da-mauve text-da-white p-2 m-2 max-h-10 rounded"
             type="button"
           >
             <a
               href={data.homePage.consultationUrl}
-              className="font-bold text-da-black"
+              className="font-bold text-da-black hover:text-blue-900"
             >
               {data.homePage.consultationText}
             </a>
@@ -46,7 +46,7 @@ function Home() {
                     src={item.servicesImage.url}
                     alt={item.servicesImage.title}
                   />
-                  <a className="text-lg" href={item.servicesUrl}>
+                  <a className="text-lg hover:text-blue-900" href={item.servicesUrl}>
                     {item.servicesText}
                   </a>
                 </div>
