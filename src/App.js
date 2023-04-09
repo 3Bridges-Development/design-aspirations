@@ -11,6 +11,12 @@ query {
   welcomeBanner(id: "2m4bS9r2r0xHw986TvVGqC") {
     bannerHeadline
   }
+  navigationCollection(order: sys_firstPublishedAt_ASC) {
+    items {
+      navUrl
+      navText
+    }
+  }
   homePage(id:"umC0ztECwdjKJwjWzd964") {
     logo {
       title
@@ -128,7 +134,7 @@ function App() {
       ) : (
         <WelcomeBanner bannerData={data} showContent={false} />
       )}
-      <Navigation />
+      <Navigation navigationData={data} />
       <Outlet context={data} />
       <Footer footerData={data} />
     </div>
