@@ -15,10 +15,15 @@ function Home() {
         />
         <div className="flex items-center">
           <button
-            className="md:absolute md:bottom-30 bg-da-mauve text-da-white p-2 m-2 max-h-10 hover:text-blue-200 rounded"
+            className="md:absolute md:bottom-30 bg-da-mauve text-da-white p-2 m-2 max-h-10 rounded"
             type="button"
           >
-            <a href="/contact" className="font-bold text-da-black">BOOK CONSULTATION</a>
+            <a
+              href={data.homePage.consultationUrl}
+              className="font-bold text-da-black hover:text-blue-900"
+            >
+              {data.homePage.consultationText}
+            </a>
           </button>
         </div>
         <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md"></hr>
@@ -30,34 +35,29 @@ function Home() {
         <h3 className="text-xl m-1">{data.homePage.byline}</h3>
       </section>
       <section className="text-center mt-1 bg-da-grey p-2 py-8">
-        <h2 className="text-2xl pb-4">SERVICES OFFERED</h2>
+        <h2 className="text-2xl pb-4">{data.homePage.servicesHeadline}</h2>
         <div className="flex flex-row justify-center flex-wrap">
-          <div className="flex flex-col items-center p-20">
-            <h2 className="text-lg">INSTRUCTIONAL DESIGN</h2>
-            <img
-              className="w-full max-h-fit p-10"
-              src={data.homePage.idImage.url}
-              alt={data.homePage.idImage.title}
-            />
-            <a className="text-lg" href="instructionaldesign">
-              see more
-            </a>
-          </div>
-          <div className="flex flex-col items-center p-20">
-            <h2 className="text-lg">MULTI-MEDIA DESIGN</h2>
-            <img
-              className="w-full max-h-fit p-10"
-              src={data.homePage.mmImage.url}
-              alt={data.homePage.mmImage.title}
-            />
-            <a className="text-lg" href="multimediadesign">
-              see more
-            </a>
-          </div>
+          {data
+            ? data.servicesCollection.items.map((item) => (
+                <div className="flex flex-col items-center p-20">
+                  <h2 className="text-lg">{item.servicesHeader}</h2>
+                  <img
+                    className="w-full max-h-fit p-10"
+                    src={item.servicesImage.url}
+                    alt={item.servicesImage.title}
+                  />
+                  <a className="text-lg hover:text-blue-900" href={item.servicesUrl}>
+                    {item.servicesText}
+                  </a>
+                </div>
+              ))
+            : null}
         </div>
       </section>
       <section className="flex flex-col items-center text-center mt-1 p-2 py-8">
-        <h2 className="text-2xl justify-center">TESTIMONIALS</h2>
+        <h2 className="text-2xl justify-center">
+          {data.homePage.testimonialHeadline}
+        </h2>
         {/* need logic to only show headshot photo when data exists */}
         {data.homePage.logo.url ? (
           <img
@@ -66,7 +66,9 @@ function Home() {
             alt={data.homePage.testimonialHeadshot.title}
           />
         ) : null}
-        <h4 className="italic text-lg p-2 md:w-3/5">{data.homePage.testimonialText}</h4>
+        <h4 className="italic text-lg p-2 md:w-3/5">
+          {data.homePage.testimonialText}
+        </h4>
         <h5 className="font-bold text-lg p-2">
           {data.homePage.testimonialName}
         </h5>

@@ -8,27 +8,43 @@ import "./App.css";
 
 const query = `
 query {
+  welcomeBanner(id: "2m4bS9r2r0xHw986TvVGqC") {
+    bannerHeadline
+  }
+  navigationCollection(order: sys_firstPublishedAt_ASC) {
+    items {
+      navUrl
+      navText
+    }
+  }
   homePage(id:"umC0ztECwdjKJwjWzd964") {
     logo {
       title
       url
     }
+    consultationUrl
+    consultationText
     slogan
     byline
-    idImage {
-      title
-      url
-    }
-    mmImage {
-      title
-      url
-    }
+    servicesHeadline
+    testimonialHeadline
     testimonialHeadshot {
       title
       url
     }
     testimonialText
     testimonialName
+  }
+  servicesCollection(order:sys_firstPublishedAt_ASC) {
+    items {
+      servicesHeader
+      servicesImage {
+        title
+        url
+      }
+      servicesUrl
+      servicesText
+    }
   }
   aboutPage(id:"hlvVK6Q7xdJqqV7e1Kvc3") {
   	quote
@@ -72,13 +88,13 @@ query {
     title
   }
   mmCardCollection(order:title_DESC) {
-    items {
-      image {
+      items {
+      	image {
+        title
+        url
+      }
       title
-      url
-    }
-    title
-    cardDescription
+      cardDescription
     }
   }
   daPerspective(id: "40ZyLLQspLPfZZmVMVA1m2") {
@@ -98,6 +114,12 @@ query {
       blogFullDesc
     }
   }
+  footerCollection(order:footerText_ASC) {
+    items {
+      footerUrl
+      footerText
+    }
+  }
 }
 `;
 
@@ -115,13 +137,13 @@ function App() {
   return (
     <div className="App flex flex-col min-h-screen">
       {window.location.href.endsWith("/") ? (
-        <WelcomeBanner showContent={true} />
+        <WelcomeBanner bannerData={data} showContent={true} />
       ) : (
-        <WelcomeBanner showContent={false} />
+        <WelcomeBanner bannerData={data} showContent={false} />
       )}
-      <Navigation />
+      <Navigation navigationData={data} />
       <Outlet context={data} />
-      <Footer />
+      <Footer footerData={data} />
     </div>
   );
 }
