@@ -101,6 +101,12 @@ query {
       blogFullDesc
     }
   }
+  footerCollection(order:footerText_ASC) {
+    items {
+      footerUrl
+      footerText
+    }
+  }
 }
 `;
 
@@ -124,7 +130,7 @@ function App() {
       )}
       <Navigation />
       <Outlet context={data} />
-      <Footer />
+      <Footer footerData={data} />
     </div>
   );
 }
