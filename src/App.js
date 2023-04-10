@@ -120,6 +120,23 @@ query {
       blogButtonText
     }
   }
+  contactPage(id: "2PN0ziNtulRRhNlcQXWbPn") {
+    contactHeadline
+    contactSubheadline
+    formName
+    formPhone
+    formEmail
+    formDescription
+    formButtonText
+    meetingHeadline
+    meetingSubheadline
+  }
+  meetingButtonCollection (order: sys_firstPublishedAt_ASC) {
+    items {
+      buttonUrl
+      buttonText
+    }
+  }
   footerCollection(order:footerText_ASC) {
     items {
       footerUrl
