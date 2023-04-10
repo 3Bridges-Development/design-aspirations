@@ -9,7 +9,12 @@ export default function Card({ image, description, title }) {
           {image.isVideo ? (
             <video src={image.src} controls="controls" />
           ) : (
-            <a href={image.src} className="pt-8 pb-12 w-100">
+            <a
+              href={image.src}
+              className="pt-8 pb-12 w-100"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={image.src}
                 alt={image.alt}
