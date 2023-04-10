@@ -43,7 +43,7 @@ function DAPerspective() {
                 type="button"
                 onClick={() => setShouldShowSingleBlog(false)}
               >
-                RETURN TO BLOG PAGE
+                {featuredBlog.blogButtonText}
               </button>
             </div>
           </>

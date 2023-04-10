@@ -8,24 +8,25 @@ function About() {
   return (
     <>
       <section>
-        <h1 className="text-xl flex justify-center pb-4">ABOUT US</h1>
+        <h1 className="text-xl flex justify-center pb-4">
+          {data.aboutPage.aboutHeadline}
+        </h1>
         <div className="bg-da-black p-20 flex flex-col items-center text-center">
-          {data.aboutPage.image ? (
-            // you may need to change what the check is for data existing above
-            <img src="#" alt="test" className="md:w-2/5 sm:2-1/5 max-h-fit"/>
-          ) : (
-            null
-          )}
+          {data.aboutPage.quoteImage ? (
+            <img
+              src={data.aboutPage.quoteImage.url}
+              alt={data.aboutPage.quoteImage.title}
+              className="md:w-2/5 sm:2-1/5 max-h-fit pb-8"
+            />
+          ) : null}
           {data.aboutPage.quote ? (
             <h2 className="text-4xl text-da-white">{data.aboutPage.quote}</h2>
-          ) : (
-            null
-          )}
+          ) : null}
           {data.aboutPage.quoteAuthor ? (
-            <h3 className="text-xl text-da-white">{data.aboutPage.quoteAuthor}</h3>
-          ) : (
-            null
-          )}
+            <h3 className="text-xl text-da-white">
+              {data.aboutPage.quoteAuthor}
+            </h3>
+          ) : null}
         </div>
       </section>
       <section className="bg-da-light-grey p-8 flex md:flex-row md:justify-center flex-col items-center">

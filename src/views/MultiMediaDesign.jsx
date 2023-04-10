@@ -26,7 +26,11 @@ function MultiMediaDesign() {
           {data
             ? data.mmCardCollection.items.map((item) => (
                 <Card
-                  image={{ src: item.image.url, alt: item.image.title }}
+                  image={{
+                    src: item.image.url,
+                    isVideo: item.image.url.includes("videos.") ? true : false,
+                    alt: item.image.title,
+                  }}
                   title={item.title}
                   description={returnLineBreaks(item.cardDescription)}
                 />
