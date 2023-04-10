@@ -7,7 +7,9 @@ export default function Card({ image, description, title }) {
         <h2 className="text-da-black self-start text">{title}</h2>
         <div className="h-72 w-100 flex overflow-hidden">
           {image.isVideo ? (
-            <video src={image.src} controls="controls" />
+            <div className="pt-8 pb-12 w-100">
+              <video src={image.src} controls="controls" className="pt-8 pb-12 h-72 justify-items-center overflow-hidden" />
+            </div>
           ) : (
             <a
               href={image.src}
