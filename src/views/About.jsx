@@ -12,9 +12,12 @@ function About() {
           {data.aboutPage.aboutHeadline}
         </h1>
         <div className="bg-da-black p-20 flex flex-col items-center text-center">
-          {data.aboutPage.image ? (
-            // you may need to change what the check is for data existing above
-            <img src="#" alt="test" className="md:w-2/5 sm:2-1/5 max-h-fit" />
+          {data.aboutPage.quoteImage ? (
+            <img
+              src={data.aboutPage.quoteImage.url}
+              alt={data.aboutPage.quoteImage.title}
+              className="md:w-2/5 sm:2-1/5 max-h-fit pb-8"
+            />
           ) : null}
           {data.aboutPage.quote ? (
             <h2 className="text-4xl text-da-white">{data.aboutPage.quote}</h2>

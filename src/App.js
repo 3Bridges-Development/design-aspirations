@@ -48,6 +48,10 @@ query {
   }
   aboutPage(id:"hlvVK6Q7xdJqqV7e1Kvc3") {
     aboutHeadline
+    quoteImage {
+      title
+      url
+    }
   	quote
     quoteAuthor
     headshot {
