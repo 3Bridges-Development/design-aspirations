@@ -113,6 +113,7 @@ query {
       blogTitle
       blogShortDesc
       blogFullDesc
+      blogButtonText
     }
   }
   footerCollection(order:footerText_ASC) {
