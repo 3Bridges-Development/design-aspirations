@@ -10,8 +10,22 @@ function About() {
       <section>
         <h1 className="text-xl flex justify-center pb-4">ABOUT US</h1>
         <div className="bg-da-black p-20 flex flex-col items-center text-center">
-          <h2 className="text-4xl text-da-white">{data.aboutPage.quote}</h2>
-          <h3 className="text-xl text-da-white">{data.aboutPage.quoteAuthor}</h3>
+          {data.aboutPage.image ? (
+            // you may need to change what the check is for data existing above
+            <img src="#" alt="test" className="md:w-2/5 sm:2-1/5 max-h-fit"/>
+          ) : (
+            null
+          )}
+          {data.aboutPage.quote ? (
+            <h2 className="text-4xl text-da-white">{data.aboutPage.quote}</h2>
+          ) : (
+            null
+          )}
+          {data.aboutPage.quoteAuthor ? (
+            <h3 className="text-xl text-da-white">{data.aboutPage.quoteAuthor}</h3>
+          ) : (
+            null
+          )}
         </div>
       </section>
       <section className="bg-da-light-grey p-8 flex md:flex-row md:justify-center flex-col items-center">

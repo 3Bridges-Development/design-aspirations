@@ -7,7 +7,7 @@ export default function Footer({ footerData }) {
         {footerData
           ? footerData.footerCollection.items.map((item) => (
               <div>
-                <a href={item.footerUrl} className="hover:text-blue-600">
+                <a href={item.footerUrl} className="hover:text-blue-600" target="_blank" rel="noreferrer">
                   {item.footerText}
                 </a>
               </div>
