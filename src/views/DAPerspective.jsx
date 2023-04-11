@@ -24,7 +24,7 @@ function DAPerspective() {
         {shouldShowSingleBlog && featuredBlog ? (
           <>
             {/* the text1 for content is what is unique here to determine blog data when clicked - so headers need to be unique */}
-            <div className="bg-da-light-grey flex flex-col items-center md:w-2/4 w-4/5">
+            <div className="bg-da-light-grey flex flex-col items-center md:w-2/4 w-4/5 rounded">
               <div className="p-4">
                 <img
                   src={featuredBlog.blogImage.url}
@@ -56,7 +56,7 @@ function DAPerspective() {
                 className="h-auto pt-8 pb-16"
               />
             </div>
-            <div className="bg-da-light-grey flex flex-row flex-wrap justify-center w-3/5 max-h-screen overflow-y-auto">
+            <div className="bg-da-light-grey flex flex-row flex-wrap justify-center w-3/5 max-h-screen overflow-y-auto rounded">
               {data
                 ? data.blogCardCollection.items.map((item) => (
                     <BlogCard
