@@ -55,10 +55,12 @@ function Home() {
         </div>
       </section>
       <section className="flex flex-col items-center text-center mt-1 p-2 py-8">
-        <h2 className="text-2xl justify-center">
-          {data.homePage.testimonialHeadline}
-        </h2>
-        {/* need logic to only show headshot photo when data exists */}
+        {/* need logic to only show testimonial and headshot photo when data exists */}
+        {data.homePage.testimonialHeadline ? (
+          <h2 className="text-2xl justify-center">
+            {data.homePage.testimonialHeadline}
+          </h2>
+        ) : null}
         {data.homePage.logo.url ? (
           <img
             className="w-1/5 max-h-fit p-2 rounded-full"
@@ -66,12 +68,16 @@ function Home() {
             alt={data.homePage.testimonialHeadshot.title}
           />
         ) : null}
-        <h4 className="italic text-lg p-2 md:w-3/5">
-          {data.homePage.testimonialText}
-        </h4>
-        <h5 className="font-bold text-lg p-2">
-          {data.homePage.testimonialName}
-        </h5>
+        {data.homePage.testimonialText ? (
+          <h4 className="italic text-lg p-2 md:w-3/5">
+            {data.homePage.testimonialText}
+          </h4>
+        ) : null}
+        {data.homePage.testimonialName ? (
+          <h5 className="font-bold text-lg p-2">
+            {data.homePage.testimonialName}
+          </h5>
+        ) : null} 
       </section>
     </>
   );
