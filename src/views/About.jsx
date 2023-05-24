@@ -29,7 +29,7 @@ function About() {
           ) : null}
         </div>
       </section>
-      <section className="bg-da-light-grey p-8 flex md:flex-row md:justify-center flex-col items-center">
+      <section className="p-8 flex md:flex-row md:justify-center flex-col items-center">
         <div className="md:w-2/5 w-4/5 flex flex-col items-center">
           <img
             src={data.aboutPage.headshot.url}
@@ -48,7 +48,7 @@ function About() {
       <section>
         {data
           ? data.aboutPageTextBlockCollection.items.map((item) => (
-              <div className="bg-da-grey md:px-8 p-2 pt-8 pb-8 flex flex-col items-center">
+              <div className="md:px-8 p-2 pt-8 pb-8 flex flex-col items-center">
                 <h2 className="text-da-black w-3/5 text-xl">{item.headline}</h2>
                 <p className="text-da-black w-3/5 text-lg pt-4">
                   {returnLineBreaks(item.description)}
