@@ -137,8 +137,9 @@ query {
       buttonText
     }
   }
-  footerCollection(order:footerText_ASC) {
+  footerCollection(order:sys_publishedAt_DESC) {
     items {
+      footerCopyrightText
       footerUrl
       footerText
     }
