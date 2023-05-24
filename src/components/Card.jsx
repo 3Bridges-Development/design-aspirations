@@ -33,11 +33,11 @@ export default function Card({ image, description, title }) {
         </div>
         <div className="text-da-black text self-start pt-12 cardDescriptionContainer">
         </div>
-        {description.map(item => 
+        {description ? (description.map(item => 
           <ReactMarkdown className="self-start prose">
             {item.props.children}
           </ReactMarkdown>
-          )}
+          )) : ""}
       </div>
     </>
   );
