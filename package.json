@@ -32,6 +32,12 @@
     "client": "npm start",
     "dev": "concurrently \"npm run client\" \"npm run server\""
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
