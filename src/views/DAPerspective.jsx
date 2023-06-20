@@ -3,6 +3,7 @@ import BlogCard from "../components/Blog-Card";
 import { useOutletContext } from "react-router-dom";
 import returnLineBreaks from "../hooks/line-break";
 import da_perspective from "../assets/da_perspective_final.png";
+import ReactMarkdown from "react-markdown";
 
 function DAPerspective() {
   const [shouldShowSingleBlog, setShouldShowSingleBlog] = useState(false);
@@ -26,38 +27,62 @@ function DAPerspective() {
             {/* the text1 for content is what is unique here to determine blog data when clicked - so headers need to be unique */}
             <div className="flex flex-col items-center md:w-2/4 w-4/5 rounded">
               <div className="p-4">
-                <img
-                  src={featuredBlog.blogImage.url}
-                  alt={featuredBlog.blogImage.title}
-                  className="h-auto pt-8 pb-16 w-full max-h-fit"
-                />
-                <h2 className="justify-self-center pb-4">
-                  {featuredBlog.blogTitle}
-                </h2>
-                <p className="justify-self-center">
-                  {returnLineBreaks(featuredBlog.blogFullDesc)}
-                </p>
+                {featuredBlog.blogImage.url && featuredBlog.blogImage.title ? (
+                  <>
+                    <img
+                      src={featuredBlog.blogImage.url}
+                      alt={featuredBlog.blogImage.title}
+                      className="h-auto pt-8 pb-16 w-full max-h-fit"
+                    />
+                    <h2 className="justify-self-center pb-4">
+                      {featuredBlog.blogTitle}
+                    </h2>
+                  </>
+                ) : (
+                  ""
+                )}
+                {featuredBlog.blogFullDesc.type === Array && featuredBlog.blogFullDesc ? (featuredBlog.blogFullDesc.map(item => 
+                  <ReactMarkdown className="self-start prose">
+                    {item.props.children}
+                  </ReactMarkdown>
+                )) : (
+                  featuredBlog.blogFullDesc ? (
+                    <p className="justify-self-center">
+                      {returnLineBreaks(featuredBlog.blogFullDesc)}
+                    </p>
+                  ) : (
+                    ""
+                  )
+                )}
               </div>
-              <button
-                className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center rounded"
-                type="button"
-                onClick={() => setShouldShowSingleBlog(false)}
-              >
-                {featuredBlog.blogButtonText}
-              </button>
+              {featuredBlog.blogButtonText ? (
+                <button
+                  className="bg-da-black text-da-white p-2 m-2 max-h-10 hover:text-blue-200 self-center rounded"
+                  type="button"
+                  onClick={() => setShouldShowSingleBlog(false)}
+                >
+                  {featuredBlog.blogButtonText}
+                </button>
+              ) : (
+                ""
+              )}
             </div>
           </>
         ) : (
-          <div className="flex flex-row flex-wrap justify-center pb-8">
+          <div className="flex flex-col items-center pb-8">
             <div className="p-4">
-              <img
-                src={data ? data.daPerspective.image.url : da_perspective}
-                alt={data.daPerspective.image.title}
-                className="h-auto pt-8 pb-16"
-              />
+              {data.daPerspective.image.url && data.daPerspective.image.title ? (
+                <img
+                  src={data ? data.daPerspective.image.url : da_perspective}
+                  alt={data.daPerspective.image.title}
+                  className="h-auto pt-8 pb-16"
+                />
+              ) : (
+                ""
+              )}
             </div>
-            <div className="flex flex-row flex-wrap justify-center w-3/5 max-h-screen overflow-y-auto rounded">
-              {data
+            <div className="flex flex-row flex-wrap justify-center max-h-screen overflow-y-auto rounded">
+              {data.blogCardCollection.items
                 ? data.blogCardCollection.items.map((item) => (
                     <BlogCard
                       image={{

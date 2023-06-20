@@ -1,7 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-
 export default function Card({ image, description, title }) {
 
   return (
