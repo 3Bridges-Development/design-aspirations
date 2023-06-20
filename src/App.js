@@ -137,9 +137,11 @@ query {
       buttonText
     }
   }
-  footerCollection(order:sys_publishedAt_DESC) {
+  footerWrapper(id: "19bEz5XI2eU3EBLJZuvMAu") {
+    footerAlignment
+  }
+  footerCollection(order:sys_publishedAt_ASC) {
     items {
-      footerCopyrightText
       footerUrl
       footerText
     }
