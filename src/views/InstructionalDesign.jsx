@@ -15,13 +15,13 @@ function InstructionalDesign() {
             data ? data.instructionalDesign.instructionalImage.url : id_header
           }
           alt={data.instructionalDesign.instructionalImage.title}
-          className="h-auto md:w-1/5 w-3/5 pt-8 pb-16"
+          className="h-auto md:w-1/5 w-3/5 pt-8 pb-8"
         />
       </section>
       <section className="flex items-center justify-center p-8">
-        <div className="text-da-black w-4/5 pl-8 text-xl">
+        <div className="text-da-black w-4/5 pl-8 text-xl pb-6">
           {data.instructionalDesign.instructionalTitle}
-          <hr className="pb-2 border-1 bg-black" />
+          <hr className="pb-1 bg-black rounded-sm" />
         </div>
       </section>
       <section className="p-8 flex justify-center">

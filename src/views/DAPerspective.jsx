@@ -70,13 +70,14 @@ function DAPerspective() {
                 <img
                   src={data ? data.daPerspective.image.url : da_perspective}
                   alt={data.daPerspective.image.title}
-                  className="h-auto pt-8 pb-16"
+                  className="h-auto pt-4 pb-8"
                 />
               ) : (
                 ""
               )}
             </div>
-            <div className="flex flex-row flex-wrap justify-center max-h-screen overflow-y-auto rounded">
+            <hr className="pb-1 bg-black rounded-sm w-4/5 pb-8" />
+            <section className="flex flex-row flex-wrap justify-center w-4/5 rounded">
               {data.blogCardCollection.items
                 ? data.blogCardCollection.items.map((item) => (
                     <BlogCard
@@ -93,7 +94,7 @@ function DAPerspective() {
                     />
                   ))
                 : null}
-            </div>
+            </section>
           </div>
         )}
       </section>
