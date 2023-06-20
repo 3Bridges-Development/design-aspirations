@@ -76,7 +76,7 @@ function DAPerspective() {
                 ""
               )}
             </div>
-            <hr className="pb-1 bg-black rounded-sm w-4/5" />
+            <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md" />
             <section className="flex flex-row flex-wrap justify-center w-4/5 rounded pt-8">
               {data.blogCardCollection.items
                 ? data.blogCardCollection.items.map((item) => (

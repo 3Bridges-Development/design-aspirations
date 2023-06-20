@@ -19,7 +19,7 @@ function MultiMediaDesign() {
       <section className="flex justify-center p-8">
         <div className="text-da-black w-4/5 pl-8 text-xl pb-6">
           {data.multiMedia.title}
-          <hr className="pb-1 bg-black rounded-sm" />
+          <hr className="p-1 mt-8 bg-da-black rounded-md" />
         </div>
       </section>
       <section className="p-8 flex justify-center">
