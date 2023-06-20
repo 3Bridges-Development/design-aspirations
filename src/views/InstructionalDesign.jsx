@@ -18,9 +18,10 @@ function InstructionalDesign() {
           className="h-auto md:w-1/5 w-3/5 pt-8 pb-16"
         />
       </section>
-      <section className="flex justify-center p-8">
+      <section className="flex items-center justify-center p-8">
         <div className="text-da-black w-4/5 pl-8 text-xl">
           {data.instructionalDesign.instructionalTitle}
+          <hr className="pb-2 border-1 bg-black" />
         </div>
       </section>
       <section className="p-8 flex justify-center">
@@ -28,7 +29,11 @@ function InstructionalDesign() {
           {data
             ? data.cardCollection.items.map((item) => (
                 <Card
-                  image={{ src: item.image.url, alt: item.image.title }}
+                  image={{ 
+                    src: item.image.url, 
+                    alt: item.image.title,
+                    isVideo: item.image.url.includes("videos.") ? true : false,
+                   }}
                   title={item.title}
                   description={returnLineBreaks(item.cardDescription)}
                 />
