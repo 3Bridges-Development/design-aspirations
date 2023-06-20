@@ -64,7 +64,7 @@ function DAPerspective() {
             </div>
           </>
         ) : (
-          <div className="flex flex-col items-center pb-8">
+          <div className="flex flex-col items-center">
             <div className="p-4">
               {data.daPerspective.image.url && data.daPerspective.image.title ? (
                 <img
@@ -76,8 +76,8 @@ function DAPerspective() {
                 ""
               )}
             </div>
-            <hr className="p-1 mt-8 bg-da-black w-4/5 rounded-md" />
-            <section className="flex flex-row flex-wrap justify-center w-4/5 rounded pt-8">
+            <hr className="p-1 bg-da-black w-4/5 rounded-md" />
+            <section className="flex flex-row flex-wrap justify-center w-4/5 rounded">
               {data.blogCardCollection.items
                 ? data.blogCardCollection.items.map((item) => (
                     <BlogCard

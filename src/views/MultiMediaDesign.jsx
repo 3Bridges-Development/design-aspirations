@@ -16,10 +16,10 @@ function MultiMediaDesign() {
           className="h-auto md:w-1/5 w-3/5 pt-8 pb-8"
         />
       </section>
-      <section className="flex justify-center p-8">
-        <div className="text-da-black w-4/5 pl-8 text-xl pb-6">
+      <section className="flex justify-center">
+        <div className="text-da-black w-4/5 pl-8 text-xl">
           {data.multiMedia.title}
-          <hr className="p-1 mt-8 bg-da-black rounded-md" />
+          <hr className="p-1 bg-da-black rounded-md" />
         </div>
       </section>
       <section className="p-8 flex justify-center">
