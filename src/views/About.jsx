@@ -1,6 +1,7 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
 import returnLineBreaks from "../hooks/line-break";
+import Gallery from "../components/Gallery.tsx";
 
 function About() {
   const data = useOutletContext();
@@ -29,7 +30,7 @@ function About() {
           ) : null}
         </div>
       </section>
-      <section className="p-8 flex md:flex-row md:justify-center flex-col items-center">
+      <section className="p-8 pr-16 pl-8 flex md:flex-row md:justify-center flex-col items-center">
         <div className="md:w-2/5 w-4/5 flex flex-col items-center">
           <img
             src={data.aboutPage.headshot.url}
@@ -45,7 +46,31 @@ function About() {
           </p>
         </div>
       </section>
-      <section>
+      <section className="p-8 pr-8 pl-16 flex md:flex-row md:justify-center flex-col items-center">
+        <div className="w-3/5 flex items-center">
+          <p className="text-lg">
+            {returnLineBreaks(data.aboutPage.aboutParagraph)}
+          </p>
+        </div>
+        <div className="md:w-2/5 w-4/5 flex flex-col items-center">
+          <img
+            src={data.aboutPage.headshot.url}
+            alt={data.aboutPage.headshot.title}
+            className="w-2/5 rounded-full"
+          />
+          <h4 className="pt-4 font-bold">{data.aboutPage.title}</h4>
+          <h4 className="pb-4 font-bold">{data.aboutPage.name}</h4>
+        </div>
+      </section>
+      {/* <section className="p-8 flex md:flex-row md:justify-center flex-col items-center">
+        <div className="w-3/5 flex items-center">
+          <p className="text-lg">
+            {returnLineBreaks(data.aboutPage.aboutParagraph)}
+          </p>
+        </div>
+      </section> */}
+      {/* Old commitment - TODO replace this text above and make image optional */}
+      {/* <section>
         {data
           ? data.aboutPageTextBlockCollection.items.map((item) => (
               <div className="md:px-8 p-2 pt-8 pb-8 flex flex-col items-center">
@@ -56,6 +81,9 @@ function About() {
               </div>
             ))
           : null}
+      </section> */}
+      <section className="flex justify-center">
+        <Gallery />
       </section>
     </>
   );

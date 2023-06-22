@@ -8,9 +8,22 @@ export default function Navigation({ navigationData }) {
           {navigationData
             ? navigationData.navigationCollection.items.map((item) => (
                 <div>
-                  <a href={item.navUrl} className="hover:text-blue-600 p-2">
-                    {item.navText}
-                  </a>
+                  {window.location.href.endsWith("/") && item.navText === "HOME" ? (
+                    null
+                  ) : (
+                    <a href={item.navUrl} className="hover:text-blue-600 p-2">
+                      {item.navText}
+                    </a>
+                    // item.navText === "HOME" ? (
+                    // <a href={item.navUrl} className="hover:text-blue-600 p-2">
+                    //   <img src={favicon} alt="Designed Aspirations Icon" width="10%" />
+                    // </a>
+                    // ) : (
+                    // <a href={item.navUrl} className="hover:text-blue-600 p-2">
+                    //   {item.navText}
+                    // </a>
+                    // )
+                  )}
                 </div>
               ))
             : null}
