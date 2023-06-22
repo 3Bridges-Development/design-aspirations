@@ -9,28 +9,28 @@ export default function Gallery() {
                 <Carousel className="flex self-center" cols={3} rows={1} gap={20} loop>
                     {/* TODO add .map */}
                     <Carousel.Item>
-                        <img width="100%" src="https://picsum.photos/800/600?random=1" />
+                        <img width="100%" src="https://picsum.photos/800/600?random=1" alt="placeholder" />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width="100%" src="https://picsum.photos/800/600?random=2" />
+                        <img width="100%" src="https://picsum.photos/800/600?random=2" alt="placeholder" />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width="100%" src="https://picsum.photos/800/600?random=3" />
+                        <img width="100%" src="https://picsum.photos/800/600?random=3" alt="placeholder" />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width="100%" src="https://picsum.photos/800/600?random=3" />
+                        <img width="100%" src="https://picsum.photos/800/600?random=3" alt="placeholder" />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width="100%" src="https://picsum.photos/800/600?random=4" />
+                        <img width="100%" src="https://picsum.photos/800/600?random=4" alt="placeholder" />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width="100%" src="https://picsum.photos/800/600?random=5" />
+                        <img width="100%" src="https://picsum.photos/800/600?random=5" alt="placeholder" />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width="100%" src="https://picsum.photos/800/600?random=6" />
+                        <img width="100%" src="https://picsum.photos/800/600?random=6" alt="placeholder" />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width="100%" src="https://picsum.photos/800/600?random=7" />
+                        <img width="100%" src="https://picsum.photos/800/600?random=7" alt="placeholder" />
                     </Carousel.Item>
                 </Carousel>
             </section>

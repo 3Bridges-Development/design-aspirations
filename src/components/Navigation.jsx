@@ -1,5 +1,4 @@
 import React from "react";
-import favicon from "../assets/favicon.ico"
 
 export default function Navigation({ navigationData }) {
   return (
