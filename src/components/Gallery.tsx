@@ -8,7 +8,7 @@ export default function Gallery({aboutImages}) {
         <>
         {aboutImages.data !== null  ? (
             <section className="flex flex-wrap justify-center w-4/5 pb-16 pt-8">
-                <Carousel className="flex" cols={3} rows={1} gap={20} loop>
+                <Carousel cols={3} rows={1} gap={20} loop>
                     {aboutImages.data.aboutGalleryImagesCollection.items.length !== 0 ? aboutImages.data.aboutGalleryImagesCollection.items[0].galleryImagesCollection.items.map((image) => (
                         <Carousel.Item className="flex" style={{alignItems: "middle"}}>
                             <img width="100%" src={image.url} alt={image.title} />

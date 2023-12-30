@@ -53,14 +53,14 @@ function About() {
         </div>
       </section>
       {data.aboutPageTextBlockCollection.length !== 0 ? data.aboutPageTextBlockCollection.items.map((item) => (
-        <section className="p-8 pr-16 pl-8 md:pl-16 flex md:flex-row md:justify-center flex-col items-center">
-          <div className={`w-4/5 flex items-center`}>
-            <p className="text-lg">
+        <section className={item.headline || item.optionalAboutImage ? `p-8 pr-16 pl-8 md:pl-16 flex md:flex-row md:justify-center flex-col items-center` : `pt-8 pb-8 flex md:flex-col md:justify-center flex-col items-center`}>
+          <div className={item.headline || item.optionalAboutImage ? `w-4/5 flex items-center` : `pl-4 pr-4 flex items-center`}>
+            <p className={item.headline || item.optionalAboutImage ? `text-lg` : `text-lg text-center items-center`}>
               {returnLineBreaks(item.description)}
             </p>
           </div>
           <div className="md:w-2/5 w-4/5 flex flex-col items-center">
-            {item.optionalAboutImage ? (
+            {item.optionalAboutImage !== null ? (
               <img
                 src={item.optionalAboutImage.url}
                 alt={item.optionalAboutImage.title}
