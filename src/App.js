@@ -3,7 +3,7 @@ import Navigation from "./components/Navigation";
 import WelcomeBanner from "./components/WelcomeBanner";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
-import useContentful from "./hooks/use-contentful";
+import UseContentful from "./hooks/use-contentful";
 import "./App.css";
 
 const query = `
@@ -153,9 +153,9 @@ query {
   }
 }
 `;
-
-function App() {
-  let { data, errors } = useContentful(query);
+  
+  function App() {
+    let { data, errors } = UseContentful(query);
 
   if (errors)
     return (

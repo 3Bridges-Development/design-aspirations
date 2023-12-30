@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const { REACT_APP_SPACE_ID, REACT_APP_CDA_TOKEN } = process.env;
 
-function useContentful(query) {
+function UseContentful(query) {
   let [data, setData] = useState(null);
   let [errors, setErrors] = useState(null);
 
@@ -30,4 +30,4 @@ function useContentful(query) {
   return { data, errors };
 }
 
-export default useContentful;
+export default UseContentful;

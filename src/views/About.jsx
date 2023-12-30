@@ -2,10 +2,14 @@ import React from "react";
 import { useOutletContext } from "react-router-dom";
 import returnLineBreaks from "../hooks/line-break";
 import Gallery from "../components/Gallery.tsx";
+import returnContentfulData from "../hooks/getContentfulDataForPage.js";
 
 function About() {
-  const data = useOutletContext();
 
+  const imageData = returnContentfulData("About")
+
+  const data = useOutletContext();
+  
   return (
     <>
       <section>
@@ -70,7 +74,7 @@ function About() {
         </section>
       )) : null}
       <section className="flex justify-center">
-        <Gallery />
+        <Gallery aboutImages={imageData}/>
       </section>
     </>
   );
