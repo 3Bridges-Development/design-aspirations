@@ -73,9 +73,11 @@ function About() {
           </div>
         </section>
       )) : null}
-      <section className="flex justify-center">
-        <Gallery aboutImages={imageData}/>
-      </section>
+      {imageData.data !== null ? (
+        <section className="flex justify-center">
+          <Gallery aboutImages={imageData}/>
+        </section>
+      ) : null}
     </>
   );
 }

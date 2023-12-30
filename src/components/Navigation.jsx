@@ -20,7 +20,6 @@ export default function Navigation({ navigationData }) {
                         className="w-24"
                       />
                       ) : item.navText}
-                      {console.log(item.navText)}
                     </a>
                   )}
                 </div>
