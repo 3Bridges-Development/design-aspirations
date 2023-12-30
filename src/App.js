@@ -66,6 +66,11 @@ query {
     items{
       headline
       description
+      optionalAboutImage {
+        url
+        title
+        description
+      }
     }
   }
   instructionalDesign(id: "1HmMivcfRIh8t9Maw7zZAt") {

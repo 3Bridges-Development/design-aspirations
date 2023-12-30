@@ -32,56 +32,43 @@ function About() {
       </section>
       <section className="p-8 pr-16 pl-8 flex md:flex-row md:justify-center flex-col items-center">
         <div className="md:w-2/5 w-4/5 flex flex-col items-center">
-          <img
-            src={data.aboutPage.headshot.url}
-            alt={data.aboutPage.headshot.title}
-            className="w-2/5 rounded-full"
-          />
+          {data.aboutPage.headshot.url && data.aboutPage.headshot.title ? (
+            <img
+              src={data.aboutPage.headshot.url}
+              alt={data.aboutPage.headshot.title}
+              className="w-2/5 rounded-full"
+            />
+          ) : null}
           <h4 className="pt-4 font-bold">{data.aboutPage.title}</h4>
           <h4 className="pb-4 font-bold">{data.aboutPage.name}</h4>
         </div>
-        <div className="w-3/5 flex items-center">
+        <div className="md:w-3/5 w-4/5 flex items-center">
           <p className="text-lg">
             {returnLineBreaks(data.aboutPage.aboutParagraph)}
           </p>
         </div>
       </section>
-      <section className="p-8 pr-8 pl-16 flex md:flex-row md:justify-center flex-col items-center">
-        <div className="w-3/5 flex items-center">
-          <p className="text-lg">
-            {returnLineBreaks(data.aboutPage.aboutParagraph)}
-          </p>
-        </div>
-        <div className="md:w-2/5 w-4/5 flex flex-col items-center">
-          <img
-            src={data.aboutPage.headshot.url}
-            alt={data.aboutPage.headshot.title}
-            className="w-2/5 rounded-full"
-          />
-          <h4 className="pt-4 font-bold">{data.aboutPage.title}</h4>
-          <h4 className="pb-4 font-bold">{data.aboutPage.name}</h4>
-        </div>
-      </section>
-      {/* <section className="p-8 flex md:flex-row md:justify-center flex-col items-center">
-        <div className="w-3/5 flex items-center">
-          <p className="text-lg">
-            {returnLineBreaks(data.aboutPage.aboutParagraph)}
-          </p>
-        </div>
-      </section> */}
-      {/* Old commitment - TODO replace this text above and make image optional */}
-      {/* <section>
-        {data
-          ? data.aboutPageTextBlockCollection.items.map((item) => (
-              <div className="md:px-8 p-2 pt-8 pb-8 flex flex-col items-center">
-                <h2 className="text-da-black w-3/5 text-xl">{item.headline}</h2>
-                <p className="text-da-black w-3/5 text-lg pt-4">
-                  {returnLineBreaks(item.description)}
-                </p>
-              </div>
-            ))
-          : null}
-      </section> */}
+      {data.aboutPageTextBlockCollection.length !== 0 ? data.aboutPageTextBlockCollection.items.map((item) => (
+        <section className="p-8 pr-16 pl-8 md:pl-16 flex md:flex-row md:justify-center flex-col items-center">
+          <div className={`w-4/5 flex items-center`}>
+            <p className="text-lg">
+              {returnLineBreaks(item.description)}
+            </p>
+          </div>
+          <div className="md:w-2/5 w-4/5 flex flex-col items-center">
+            {item.optionalAboutImage ? (
+              <img
+                src={item.optionalAboutImage.url}
+                alt={item.optionalAboutImage.title}
+                className="w-2/5 rounded-full md:pt-0 pt-8"
+              />
+            ) : null} 
+            {item.headline ? (
+              <h1 className="pt-4 font-bold">{item.headline}</h1>
+            ) : null}
+          </div>
+        </section>
+      )) : null}
       <section className="flex justify-center">
         <Gallery />
       </section>
