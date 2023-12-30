@@ -2,10 +2,14 @@ import React from "react";
 import { useOutletContext } from "react-router-dom";
 import returnLineBreaks from "../hooks/line-break";
 import Gallery from "../components/Gallery.tsx";
+import returnContentfulData from "../hooks/getContentfulDataForPage.js";
 
 function About() {
-  const data = useOutletContext();
 
+  const imageData = returnContentfulData("About")
+
+  const data = useOutletContext();
+  
   return (
     <>
       <section>
@@ -32,59 +36,50 @@ function About() {
       </section>
       <section className="p-8 pr-16 pl-8 flex md:flex-row md:justify-center flex-col items-center">
         <div className="md:w-2/5 w-4/5 flex flex-col items-center">
-          <img
-            src={data.aboutPage.headshot.url}
-            alt={data.aboutPage.headshot.title}
-            className="w-2/5 rounded-full"
-          />
+          {data.aboutPage.headshot.url && data.aboutPage.headshot.title ? (
+            <img
+              src={data.aboutPage.headshot.url}
+              alt={data.aboutPage.headshot.title}
+              className="w-2/5 rounded-full"
+            />
+          ) : null}
           <h4 className="pt-4 font-bold">{data.aboutPage.title}</h4>
           <h4 className="pb-4 font-bold">{data.aboutPage.name}</h4>
         </div>
-        <div className="w-3/5 flex items-center">
+        <div className="md:w-3/5 w-4/5 flex items-center">
           <p className="text-lg">
             {returnLineBreaks(data.aboutPage.aboutParagraph)}
           </p>
         </div>
       </section>
-      <section className="p-8 pr-8 pl-16 flex md:flex-row md:justify-center flex-col items-center">
-        <div className="w-3/5 flex items-center">
-          <p className="text-lg">
-            {returnLineBreaks(data.aboutPage.aboutParagraph)}
-          </p>
-        </div>
-        <div className="md:w-2/5 w-4/5 flex flex-col items-center">
-          <img
-            src={data.aboutPage.headshot.url}
-            alt={data.aboutPage.headshot.title}
-            className="w-2/5 rounded-full"
-          />
-          <h4 className="pt-4 font-bold">{data.aboutPage.title}</h4>
-          <h4 className="pb-4 font-bold">{data.aboutPage.name}</h4>
-        </div>
-      </section>
-      {/* <section className="p-8 flex md:flex-row md:justify-center flex-col items-center">
-        <div className="w-3/5 flex items-center">
-          <p className="text-lg">
-            {returnLineBreaks(data.aboutPage.aboutParagraph)}
-          </p>
-        </div>
-      </section> */}
-      {/* Old commitment - TODO replace this text above and make image optional */}
-      {/* <section>
-        {data
-          ? data.aboutPageTextBlockCollection.items.map((item) => (
-              <div className="md:px-8 p-2 pt-8 pb-8 flex flex-col items-center">
-                <h2 className="text-da-black w-3/5 text-xl">{item.headline}</h2>
-                <p className="text-da-black w-3/5 text-lg pt-4">
+      {data.aboutPageTextBlockCollection.items.length !== 0 ? data.aboutPageTextBlockCollection.items.map((item) => (
+        <section className={item.headline || item.optionalAboutImage ? `p-8 pr-16 pl-8 md:pl-16 flex md:flex-row md:justify-center flex-col items-center` : `pt-8 pb-8 flex md:flex-col md:justify-center flex-col items-center`}>
+            {item.description ? (
+              <div className={item.headline || item.optionalAboutImage ? `w-4/5 flex items-center` : `pl-4 pr-4 flex items-center`}>
+                <p className={item.headline || item.optionalAboutImage ? `text-lg` : `text-lg text-center items-center`}>
                   {returnLineBreaks(item.description)}
                 </p>
               </div>
-            ))
-          : null}
-      </section> */}
-      <section className="flex justify-center">
-        <Gallery />
-      </section>
+            ) : null}
+          <div className="md:w-2/5 w-4/5 flex flex-col items-center">
+            {item.optionalAboutImage !== null ? (
+              <img
+                src={item.optionalAboutImage.url}
+                alt={item.optionalAboutImage.title}
+                className="w-2/5 rounded-full md:pt-0 pt-8"
+              />
+            ) : null} 
+            {item.headline ? (
+              <h1 className="pt-4 font-bold">{item.headline}</h1>
+            ) : null}
+          </div>
+        </section>
+      )) : null}
+      {imageData.data !== null ? (
+        <section className="flex justify-center pb-8">
+          <Gallery aboutImages={imageData}/>
+        </section>
+      ) : null}
     </>
   );
 }
