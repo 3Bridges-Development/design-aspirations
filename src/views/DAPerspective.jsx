@@ -13,7 +13,7 @@ function DAPerspective() {
   function handleBlogClick(e) {
     setShouldShowSingleBlog(true);
     const selectedBlog = data.blogCardCollection.items.find(
-      (item) => item.blogTitle === e.target.innerHTML
+      (item) => e.target.innerHTML.includes(item.blogTitle)
     );
     setFeaturedBlog(selectedBlog);
   }
@@ -89,6 +89,7 @@ function DAPerspective() {
                       content={{
                         text1: item.blogTitle,
                         text2: item.blogShortDesc,
+                        text3: item.readMoreText
                       }}
                       onClick={handleBlogClick}
                     />

@@ -123,6 +123,7 @@ query {
       blogShortDesc
       blogFullDesc
       blogButtonText
+      readMoreText
     }
   }
   contactPage(id: "2PN0ziNtulRRhNlcQXWbPn") {

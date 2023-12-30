@@ -31,12 +31,14 @@ export default function BlogCard({ image, content, onClick }) {
         </div>
         {content.text1 && content.text2 ? (
           <>
-            <h2
-              className="text-lg self-start hover:text-blue-600 cursor-pointer"
+            <span
+              className="text-lg self-start hover:text-blue-600 cursor-pointer text-center"
               onClick={onClick}
             >
               {content.text1}
-            </h2>
+              <br />
+              {content.text3}
+            </span>
               <br />
               <h2 className="text-lg self-start">{content.text2}</h2>
             </>

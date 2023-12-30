@@ -52,13 +52,15 @@ function About() {
           </p>
         </div>
       </section>
-      {data.aboutPageTextBlockCollection.length !== 0 ? data.aboutPageTextBlockCollection.items.map((item) => (
+      {data.aboutPageTextBlockCollection.items.length !== 0 ? data.aboutPageTextBlockCollection.items.map((item) => (
         <section className={item.headline || item.optionalAboutImage ? `p-8 pr-16 pl-8 md:pl-16 flex md:flex-row md:justify-center flex-col items-center` : `pt-8 pb-8 flex md:flex-col md:justify-center flex-col items-center`}>
-          <div className={item.headline || item.optionalAboutImage ? `w-4/5 flex items-center` : `pl-4 pr-4 flex items-center`}>
-            <p className={item.headline || item.optionalAboutImage ? `text-lg` : `text-lg text-center items-center`}>
-              {returnLineBreaks(item.description)}
-            </p>
-          </div>
+            {item.description ? (
+              <div className={item.headline || item.optionalAboutImage ? `w-4/5 flex items-center` : `pl-4 pr-4 flex items-center`}>
+                <p className={item.headline || item.optionalAboutImage ? `text-lg` : `text-lg text-center items-center`}>
+                  {returnLineBreaks(item.description)}
+                </p>
+              </div>
+            ) : null}
           <div className="md:w-2/5 w-4/5 flex flex-col items-center">
             {item.optionalAboutImage !== null ? (
               <img
@@ -74,7 +76,7 @@ function About() {
         </section>
       )) : null}
       {imageData.data !== null ? (
-        <section className="flex justify-center">
+        <section className="flex justify-center pb-8">
           <Gallery aboutImages={imageData}/>
         </section>
       ) : null}
