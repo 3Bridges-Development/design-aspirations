@@ -13,7 +13,6 @@ function Home() {
           alt={data.homePage.logo.title}
           width={data.homePage.logo.width}
           height={data.homePage.logo.height}
-          // className="md:w-2/5 sm:2-1/5 max-h-fit"
         />
         <div className="flex items-center">
           <button
@@ -44,7 +43,6 @@ function Home() {
                 <div className="flex flex-col items-center p-20">
                   <h2 className="text-lg">{item.servicesHeader}</h2>
                   <img
-                    // className="w-full max-h-fit p-10"
                     src={item.servicesImage.url}
                     alt={item.servicesImage.title}
                     width={item.servicesImage.width}
@@ -67,7 +65,6 @@ function Home() {
         ) : null}
         {data.homePage.logo.url ? (
           <img
-            // className="w-1/5 max-h-fit p-2 rounded-full"
             src={data.homePage.testimonialHeadshot.url}
             alt={data.homePage.testimonialHeadshot.title}
             width={data.homePage.testimonialHeadshot.width}

@@ -11,8 +11,8 @@ export default function Card({ image, description, title }) {
         ) : ""}
         <div className="flex overflow-hidden">
           {image.isVideo && image.src ? (
-            <div className="pt-8 flex justify-items-center ">
-              <video src={image.src} controls="controls" className="pt-8 min-h-96" width="100%" />
+            <div className="flex justify-items-center h-72">
+              <video src={image.src} controls="controls" className="pt-8" width="100%" />
             </div>
           ) : (
             image.src && image.alt ? (

@@ -17,7 +17,7 @@ function InstructionalDesign() {
           alt={data.instructionalDesign.instructionalImage.title}
           width={data.instructionalDesign.instructionalImage.width}
           height={data.instructionalDesign.instructionalImage.height}
-          className="pt-8 pb-8"
+          className="pt-8 pb-8 md:w-1/5 w-3/5"
         />
       </section>
       <section className="flex items-center justify-center">

@@ -13,7 +13,9 @@ function MultiMediaDesign() {
         <img
           src={data ? data.multiMedia.mmImage.url : mm_header}
           alt={data.multiMedia.mmImage.title}
-          className="h-auto md:w-1/5 w-3/5 pt-8 pb-8"
+          width={data.multiMedia.mmImage.width}
+          height={data.multiMedia.mmImage.height}
+          className="md:w-1/5 w-3/5 pt-8 pb-8"
         />
       </section>
       <section className="flex justify-center">
