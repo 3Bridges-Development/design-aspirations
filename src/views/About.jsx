@@ -21,7 +21,9 @@ function About() {
             <img
               src={data.aboutPage.quoteImage.url}
               alt={data.aboutPage.quoteImage.title}
-              className="md:w-2/5 sm:2-1/5 max-h-fit pb-8"
+              className="pb-8"
+              width={data.aboutPage.quoteImage.width}
+              height={data.aboutPage.quoteImage.height}
             />
           ) : null}
           {data.aboutPage.quote ? (

@@ -35,6 +35,8 @@ query {
     testimonialHeadshot {
       title
       url
+      width
+      height
     }
     testimonialText
     testimonialName
@@ -45,6 +47,8 @@ query {
       servicesImage {
         title
         url
+        width
+        height
       }
       servicesUrl
       servicesText
@@ -55,12 +59,17 @@ query {
     quoteImage {
       title
       url
+      width
+      height
+      size
     }
   	quote
     quoteAuthor
     headshot {
       title
       url
+      width
+      height
     }
     title
     name
@@ -74,6 +83,8 @@ query {
         url
         title
         description
+        width
+        height
       }
     }
   }
@@ -81,6 +92,8 @@ query {
     instructionalImage {
       title
       url
+      width
+      height
     }
     instructionalTitle
   }
@@ -89,6 +102,8 @@ query {
       image {
         title
         url
+        width
+        height
       }
       title
       cardDescription
@@ -98,6 +113,8 @@ query {
     mmImage {
       title
       url
+      width
+      height
     }
     title
   }
@@ -106,6 +123,8 @@ query {
       	image {
         title
         url
+        width
+        height
       }
       title
       cardDescription
@@ -115,6 +134,8 @@ query {
     image {
       title
       url
+      width
+      height
     }
   }
   blogCardCollection(order:sys_firstPublishedAt_DESC) {
@@ -122,6 +143,8 @@ query {
       blogImage {
         title
         url
+        width
+        height
       }
       blogTitle
       blogShortDesc
