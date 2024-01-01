@@ -1,5 +1,4 @@
 import React from "react";
-import daLogo from "../assets/daLogo.png"
 
 export default function Navigation({ navigationData }) {
   return (
@@ -13,10 +12,10 @@ export default function Navigation({ navigationData }) {
                     null
                   ) : (
                     <a href={item.navUrl} className="hover:text-blue-600 p-2">
-                      {item.navText === "HOME" ? (
+                      {item.navText === "HOME" && item.navImage !== null ? (
                         <img
-                        src={daLogo}
-                        alt={"Designed Aspirations logo"}
+                        src={item.navImage.url}
+                        alt={item.navImage.title}
                         className="w-24"
                       />
                       ) : item.navText}

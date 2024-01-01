@@ -15,6 +15,10 @@ query {
     items {
       navUrl
       navText
+      navImage {
+        title 
+        url
+      }
     }
   }
   homePage(id:"umC0ztECwdjKJwjWzd964") {
