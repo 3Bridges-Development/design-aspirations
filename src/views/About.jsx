@@ -1,7 +1,7 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
 import returnLineBreaks from "../hooks/line-break";
-import Gallery from "../components/Gallery.tsx";
+import Gallery from "../components/Gallery.jsx";
 import returnContentfulData from "../hooks/getContentfulDataForPage.js";
 
 function About() {
@@ -9,7 +9,7 @@ function About() {
   const imageData = returnContentfulData("About")
 
   const data = useOutletContext();
-  
+
   return (
     <>
       <section>
@@ -70,7 +70,7 @@ function About() {
                 alt={item.optionalAboutImage.title}
                 className="w-2/5 rounded-full md:pt-0 pt-8"
               />
-            ) : null} 
+            ) : null}
             {item.headline ? (
               <h1 className="pt-4 font-bold">{item.headline}</h1>
             ) : null}
