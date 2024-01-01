@@ -42,7 +42,9 @@ function About() {
             <img
               src={data.aboutPage.headshot.url}
               alt={data.aboutPage.headshot.title}
-              className="w-2/5 rounded-full"
+              width={data.aboutPage.headshot.width}
+              height={data.aboutPage.headshot.height}
+              className="rounded-full"
             />
           ) : null}
           <h4 className="pt-4 font-bold">{data.aboutPage.title}</h4>
@@ -68,7 +70,9 @@ function About() {
               <img
                 src={item.optionalAboutImage.url}
                 alt={item.optionalAboutImage.title}
-                className="w-2/5 rounded-full md:pt-0 pt-8"
+                width={item.optionalAboutImage.width}
+                height={item.optionalAboutImage.height}
+                className="md:pt-0 pt-8 md:pl-8"
               />
             ) : null}
             {item.headline ? (

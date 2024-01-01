@@ -15,7 +15,9 @@ function InstructionalDesign() {
             data ? data.instructionalDesign.instructionalImage.url : id_header
           }
           alt={data.instructionalDesign.instructionalImage.title}
-          className="h-auto md:w-1/5 w-3/5 pt-8 pb-8"
+          width={data.instructionalDesign.instructionalImage.width}
+          height={data.instructionalDesign.instructionalImage.height}
+          className="pt-8 pb-8"
         />
       </section>
       <section className="flex items-center justify-center">
@@ -32,6 +34,8 @@ function InstructionalDesign() {
                   image={{ 
                     src: item.image.url, 
                     alt: item.image.title,
+                    width: item.image.width,
+                    height: item.image.height,  
                     isVideo: item.image.url.includes("videos.") ? true : false,
                    }}
                   title={item.title}
