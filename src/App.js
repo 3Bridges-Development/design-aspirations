@@ -61,7 +61,6 @@ query {
       url
       width
       height
-      size
     }
   	quote
     quoteAuthor
