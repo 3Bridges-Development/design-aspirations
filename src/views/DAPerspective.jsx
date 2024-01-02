@@ -31,7 +31,9 @@ function DAPerspective() {
                     <img
                       src={featuredBlog.blogImage.url}
                       alt={featuredBlog.blogImage.title}
-                      className="h-auto pt-8 pb-16 w-full self-center"
+                      width={featuredBlog.blogImage.width}
+                      height={featuredBlog.blogImage.height}
+                      className="pt-8 pb-16 self-center"
                     />
                     <h2 className="text-center pb-4 w-full">
                       {featuredBlog.blogTitle}
@@ -70,7 +72,9 @@ function DAPerspective() {
                 <img
                   src={data ? data.daPerspective.image.url : da_perspective}
                   alt={data.daPerspective.image.title}
-                  className="h-auto pt-4 pb-8"
+                  width={data.daPerspective.image.width}
+                  height={data.daPerspective.image.height}
+                  className="pt-4 pb-8"
                 />
               ) : (
                 ""
@@ -84,6 +88,8 @@ function DAPerspective() {
                       image={{
                         src: item.blogImage.url,
                         alt: item.blogImage.title,
+                        width: item.blogImage.width,
+                        height: item.blogImage.height,
                         isVideo: item.blogImage.url.includes("videos.") ? true : false,
                       }}
                       content={{

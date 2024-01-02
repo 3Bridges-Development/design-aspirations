@@ -13,6 +13,8 @@ const returnContentfulData = (nameOfPage) => {
                   title
                   description
                   url
+                  width
+                  height
                 }
               }
             }

@@ -20,8 +20,9 @@ export default function BlogCard({ image, content, onClick }) {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  width="100%"
-                  className="pt-8 pb-4 h-72 justify-items-center overflow-hidden" //height (72) height: 18rem; /* 288px */, min width (80) width: 20rem; /* 320px */
+                  width={image.width}
+                  height={image.height}
+                  className="pt-8 pb-4 justify-items-center overflow-hidden"
                 />
               </a>
           ) : (
