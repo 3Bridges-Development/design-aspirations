@@ -36,7 +36,9 @@ export default function BlogCard({ image, content, onClick }) {
               className="text-lg self-center hover:text-blue-600 cursor-pointer text-center"
               onClick={onClick}
             >
-              {content.text1}
+              <span className="font-bold">
+                {content.text1}
+              </span>
               <br />
               {content.text3}
             </span>

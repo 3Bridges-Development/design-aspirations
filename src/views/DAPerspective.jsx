@@ -35,7 +35,7 @@ function DAPerspective() {
                       height={featuredBlog.blogImage.height}
                       className="pt-8 pb-16 self-center"
                     />
-                    <h2 className="text-center pb-4 w-full">
+                    <h2 className="text-center pb-4 w-full font-bold">
                       {featuredBlog.blogTitle}
                     </h2>
                   </>
