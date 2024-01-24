@@ -7,7 +7,7 @@ export default function Card({ image, description, title }) {
     <>
       <div className="lg:w-1/3 w-4/5 flex flex-col items-center lg:pl-8 lg:pr-8 pb-8 pt-4 pl-2 pr-2">
         {title ? (
-          <h2 className="text-da-black self-center font-bold text">{title}</h2>
+          <h2 className="text-da-black text-center font-bold text">{title}</h2>
         ) : ""}
         <div className="flex overflow-hidden">
           {image.isVideo && image.src ? (
